@@ -1,0 +1,159 @@
+.sucursales{
+    background-color: #0F68B1;
+    width: 100%;
+    min-height: 400px;
+}
+
+.item_container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px 10px 50px 10px;
+    border-radius: 5px;
+    position: relative;
+    top: -40px;
+    margin: auto;
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 30px;
+
+    z-index: 1000;
+
+    background-color: #044981;
+    box-shadow: rgba(59, 59, 66, 0.2) 0px 7px 29px 0px;
+}
+
+.card_item_sucursal{
+    background-color: rgb(14, 78, 131);
+    width: 190px;
+    height: 310px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.card_item_sucursal .label_graphic{
+    width: 100%;
+    height: 40%;
+    border-radius: 10px 10px 0 0;
+    background-color: black;
+
+    position: relative;
+    z-index: 4;
+}
+
+/* Container image card */
+.card_item_sucursal .c_img{
+    width: 100%;
+    height: 121px;
+    border-bottom: 3px solid #91dc55;
+}
+
+.card_item_sucursal .c_img,
+.card_item_sucursal .c_img img{
+    border-radius: 10px 10px 0 0 ;
+}
+
+.card_item_sucursal .c_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon_location{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #91dc55;
+    border: 2px solid #91dc55;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -110px;
+    margin: auto;
+}
+
+.icon_location > svg{
+    color: white;
+}
+
+
+.card_item_sucursal .label_info{
+    width: 100%;
+    min-height: calc(65% + 1px);
+    background-color: whitesmoke;
+    border-radius:0 0 10px 10px;
+    padding:20px 0 30px 0;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    z-index: 3;
+}
+
+.container_info_sucursal{
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.container_info_sucursal .title{
+    width: 100%;
+}
+
+.container_info_sucursal * .span{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.container_info_sucursal * h2{
+    font-size: 11px;
+    font-weight: 600;
+    color: #5c5c5c;
+}
+
+.contacto_sucursal{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: -50px;
+    user-select: none;
+    transition: var(--transition);
+
+    background-color: #91dc55;
+    color: white;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contacto_sucursal a{
+    color: white;
+}
+.card_item_sucursal .label_info:hover .contacto_sucursal{
+    bottom: 0;
+}

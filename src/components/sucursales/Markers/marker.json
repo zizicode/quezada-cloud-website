@@ -1,0 +1,29 @@
+{
+    "punteros": [
+        {
+            "description": "C/ Dr. Gonzalvo #13 La Romana, R.D.",
+            "name": "La Romana",
+            "geometry": [18.42011721869769, -68.96623044493809]
+        },
+        {
+            "description": "C/ 27 De Febrero #103, Higüey, R.D.",
+            "name": "Higuey",
+            "geometry": [18.612464963010417, -68.71150026595227]
+        },
+        {
+            "description": "Av. Barcelo frente a la estacion de combustible sunix, Punta Cana, R.D.",
+            "name": "DownTown",
+            "geometry": [18.635342637701953, -68.39739579555527]
+        },
+        {
+            "description": "Av. Estados Unidos Esq, Punta Cana, R.D.",
+            "name": "Friusa",
+            "geometry": [18.684751742518863, -68.45309326802501]
+        },
+        {
+            "description": "Plaza Cataluña, Santo Domingo, R.D.",
+            "name": "Santo Domingo",
+            "geometry": [18.47235235377998, -69.93997608451731]
+        }
+    ]
+}

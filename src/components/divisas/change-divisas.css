@@ -1,0 +1,402 @@
+.container__divisas{
+    width: 100%;
+    min-height: 10rem;
+    background: #fafafa;
+    position: relative;
+}
+
+.container_divisas{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: .4rem 1rem 3rem 1rem;
+}
+
+.container_divisas .panel_change{
+    width: 60%;
+    height: 100%;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.container_divisas .panel_change h2{
+    color: var(--text-azul);
+    margin-bottom: .4rem;
+}
+
+.change{
+    width: 100%;
+    display: grid;
+    background-color: var(--blanco);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: .5rem;
+}
+
+
+
+
+/*================================== Splash ==================================*/
+.splash{
+    position: relative;
+    margin: 2rem auto;
+    max-width: 600px;
+    width: 93%;
+    min-width: 300px;
+    padding: 3rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+
+    border: 2px solid var(--verde);
+    border-radius: 1rem;
+
+    color: var(--text-azul);
+    background-color: var(--verde);
+}
+
+.button_splash a{
+    color: white;
+}
+.splash > .ads{
+    position: absolute;
+    top: -50px;
+    left: 70px;
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+    transform: rotate(-25deg);
+    /* background-color: #fafafa; */
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    
+}
+
+.splash > .ads img{
+    width: 90%;
+}
+
+
+.splash > h2{
+    font-size: 1.5rem;
+}
+
+.splash > span{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2E2E2E;
+}
+
+.splash .button_splash{
+    position: relative;
+    padding:  1rem;
+    border-radius: 4px;
+    color: #fcfcfc;
+    background: var(--text-azul);
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+
+/* ================== Tablero Divisas Change =============== */
+
+.change_divisa{
+    margin: 0 auto;
+    padding: 2rem .2rem;
+    width: 60%;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0 5px;
+}
+
+
+.change_divisa .line::before{
+    content: '';
+    border: 2px solid var(--verde);
+    border-radius: 2px;margin-right: 5px;
+}
+.change_divisa .line::after{
+    content: '';
+    border: 2px solid var(--verde);
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.change_divisa .line small{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+
+/* ================= Divisas ===================*/
+
+.change ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.4rem;
+}
+
+.change ul li small{
+    font-size: .9rem;
+    color: #272727;
+}
+
+
+.change ul li #divisa{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    margin: auto auto 10px auto;
+    cursor: pointer;
+    transition: all 100ms linear;
+    
+}
+
+.compra1 h3 small,
+.venta1 h3 small{
+    font-size: 20px;
+}
+
+
+/* =================== image divisas ==================== */
+.dolar1 #divisa{
+    background-image: url('../../assets/bandera/bandera_americana.webp');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+.dolar2 #divisa{
+    background-image: url('../../assets/bandera/bandera_americana.webp');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+.dolar3 #divisa{
+    background-image: url('../../assets/bandera/bandera_canadiense.webp');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+.euro1 #divisa{
+    background-image: url('../../assets/bandera/bandera_europea.webp');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+.franco1 #divisa{
+    background-image: url('../../assets/bandera/bandera_zuisa.webp');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+.esterlina1 #divisa{
+    background-image: url('../../assets/bandera/bandera_reino_unido.webp');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+
+/* =============== Calculator ========================= */
+
+.calculator{
+    padding: 10px;
+    margin: 10px auto 20px auto;
+}
+
+.calculator button{
+    padding: 10px 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: #91dc55;
+    color: white;
+    cursor: pointer;
+}
+
+.calculator button:hover{
+    background-color: #89EC39;
+}
+
+/* =============== Moral calculator ========================= */
+.container_calculator{
+    position: relative;
+    min-width:300px;
+    padding: 10px;
+}
+
+.title_calculator{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.title_calculator h2{
+    font-size: 1.3rem;
+}
+
+.title_calculator .date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: .9rem;
+}
+
+.container_converter{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.css-f4c2o3{
+    max-width: 500px;
+    width: calc(96% - 10px);
+}
+
+
+
+.converter_sale{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    gap: 25px;
+
+    justify-content: space-around;
+
+}
+
+.converter_sale .compras,
+.converter_sale .ventas{
+    min-width: 100%;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    align-self: center;
+    gap: 50px;
+}
+
+
+.converter_sale .compras div p,
+.converter_sale .ventas div p{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.converter_sale .compras div p span,
+.converter_sale .ventas div p span{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.container_solicitar-tasa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_solicitar-tasa > .description_swiper{ 
+    width: max-content;
+}
+
+.container_solicitar-tasa > .description_swiper .solicitar{ 
+    background-color: #91dc55;
+    border: none;
+}
+
+
+.Close_modal{
+    padding: 3px 4px;
+    font-size: 25px;
+    color: #AEAEAE;
+    border: 1px solid #EEEEEE;
+    border-radius:7px;
+    background-color: #FBFBFB;
+    cursor: pointer;
+    transition: ease .19s;
+    font-weight: 600;
+}
+
+.Close_modal:hover{
+    background-color: #F85151;
+    color: white;
+    border: 1px solid #DA3131;
+}
+
+
+/* =============== Funcionalidad ========================= */
+
+.change ul li > .active_divisa#divisa{
+    border: .3rem solid var(--verde);
+}
+
+
+@media only screen and (max-width:1065px){
+   
+
+}
+
+@media only screen and (max-width:900px){
+    .container_divisas .panel_change{
+        width: var(--container-width-md);
+    }
+}
+
+@media only screen and (max-width:600px){
+    .container_divisas .panel_change{
+        width: 95%;
+        height: 100%;
+        min-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .change_divisas{
+        padding: 1rem 0rem 3rem 0rem;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+    }
+
+    .line{
+        min-width: 100px;
+    }
+
+    .change ul{
+        padding: .5rem;
+    }
+
+    .change ul li small{
+        display: none;
+    }
+    .dolar2{
+        display: none;
+    }
+}

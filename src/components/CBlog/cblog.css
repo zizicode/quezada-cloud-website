@@ -1,0 +1,254 @@
+.content_all_home > .swiper {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+  }
+
+  .blog-container{
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FCFCFC;
+    border-radius: 2rem;
+    margin-top: 20px;
+  }
+
+  .gif_drag{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: 101;
+    display: none;
+    transform: translateY(20px);
+  }
+  .gif_drag img{
+    width: 100%;
+  }
+
+  .gif_drag,
+  .gif_drag img{
+    border-radius: 0 0 10px 0;
+  }
+
+  .blog-container .swiper-slide {
+    width: 100%;
+    font-size: 18px;
+    background: #FCFCFC;
+    min-height: 450px;
+    cursor: grab;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  
+
+  /*Card Container Blog */
+
+  .card_blog{
+    width: 96%;
+    min-width: 280px;
+    max-width: 800px;
+    height: auto;
+    padding: 30px;
+    background: #FCFCFC;
+
+    display: flex;
+  }
+
+  .card_blog .image_card{
+    width: 50%;
+    min-width: 300px;
+    position: relative;
+    transform: translate(30px, -20px);
+  }
+
+  .card_blog .image_card a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all .3s linear;
+  }
+
+
+  .link_post{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    background: rgba(137, 236, 57, .9);
+    transition: all .3s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .link_post i{
+    color: #fff;
+  }
+
+  .link_post .title_link_post{
+    font-size: .7rem;
+    color: #fff;
+  }
+
+
+  /* .card_blog .image_card,
+  .card_blog .image_card img{
+  } */
+
+  .card_blog .image_card img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card_item{
+    width: 50%;
+    padding: 1rem;
+    border-radius:.5rem;
+    background: rgba(14, 63, 103, .9);
+    transform: translate(-30px, 40px);
+    color: var(--blanco-secundary);
+    transition: all .2s ease;
+  }
+
+  .card_item:hover{
+    background:rgba(14, 63, 103, 1) ;
+    cursor: grab;
+  }
+
+  .item_card{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    row-gap: 10px;
+  }
+
+  .item_card .data{
+    text-align: right;
+    font-size: .8rem;
+    color: #CDCDCD;
+  }
+
+  .item_card h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .line_item_blog{
+    width: 100px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+  }
+
+  .item_card p{
+    width: 100%;
+    font-size: .9rem;
+    color: #E7E6E6;
+  }
+
+  .item_card button{
+    display: block;
+    width: max-content;
+    padding: 7px 10px;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+    font-weight: 500;
+    transition: all .2s ease;
+  }
+
+
+
+ .item_card button:hover{
+  background-color: #fff;
+  color: var(--azul);
+ }
+
+
+ .card_blog .image_card a:hover .link_post{
+    height: 100%;
+ }
+
+
+ .card_item:hover > .link_post{
+  height: 100%;
+ }
+
+
+/* @media query */
+
+@media only screen and (max-width: 700px){
+  .gif_drag{
+    display: block;
+  }
+  .card_blog{
+    width: 100%;
+    height: 500px;
+    padding: 10px 0 10px 0;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card_item{
+    width: 300px;
+    min-width: 300px;
+    border-radius: 0 0 10px 10px;
+    background:rgba(14, 63, 103, 1) ;
+  }
+
+  .image_card{
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+  }
+
+  .image_card img{
+  width: 300px;
+}
+
+
+  .image_card,
+  .image_card img{
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card_blog .image_card,
+  .card_item{
+    transform: none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next{
+    display: none;
+  }
+
+  .blog-container .swiper-slide {
+    min-height: 600px;
+  }
+}

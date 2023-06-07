@@ -1,0 +1,40 @@
+div.notfound{
+    width: 100%;
+    min-height: 50vh;
+    color: #91dc55;
+    text-align: center;
+}
+
+div.notfound h1{
+    font-size: 1rem;
+    margin: 40px 1rem 5px 1rem;
+}
+
+div.notfound p{
+    margin-bottom: 10px;
+}
+
+div.notfound a button{
+    padding: 10px 15px;
+    color: #91dc55;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 300ms linear;
+}
+
+div.notfound a button:hover{
+    background: #91dc55;
+    color: whitesmoke;
+}
+div.svg{
+    margin: 2rem auto;
+    width: 50%;
+    height: auto;
+    max-width: 700px;
+    min-width: 280px;
+}
+
+div.svg img{
+    width: 100%;
+    object-fit: cover;
+}

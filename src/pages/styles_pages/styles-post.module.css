@@ -1,0 +1,99 @@
+.container_all{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F4F6F6;
+}
+
+.container_all .header{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 290px;
+    min-height: 40vh;
+    max-height: 450px;
+    margin: auto;
+    background-color: white;
+}
+
+.container_all .header .container_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container_all .header .container_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center bottom ;
+}
+
+.container_body{
+    width: 90%;
+    max-width: 900px;
+    min-width: 290px;
+    margin: auto;
+    transform: translateY(-20px);
+    background-color: white;
+    padding: 20px;
+}
+
+.container_body  h1{
+    font-size: 1.3rem;
+    color: #0E3F67;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.container_body  h1 label{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.container_body  h1 label > span{
+    font-size: .6rem;
+    color: #808B96;
+}
+
+.container_body .redes{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.container_body .redes h2{
+    font-size: 1rem;
+    padding: 10px 10px 10px 0;
+}
+
+.container_body .redes ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container_body .redes svg{
+    font-size: 1.2rem;
+}
+
+.facebook{
+    color: #3b5998;
+}
+
+.linkedin{
+    color: #0e76a8;
+}
+
+.instagram{
+    color: #f72c7a;
+}
+
+
+/* Contenedor del post */
+
+.body{
+    width: 100%;
+    height: auto;
+}
