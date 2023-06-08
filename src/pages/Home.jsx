@@ -5,7 +5,6 @@ import ChangeDivisas from "../components/divisas/ChangeDivisas";
  import SwiperNav from "../components/navbar/SwiperNav";
 import NavBar from '../../src/components/navbar/NavBar';
 import Loading from "../components/pageLoading/Loading";
-import Header from "../components/navbar/header-slider/header";
 
 
 
@@ -43,7 +42,6 @@ const Home = () => {
       </Helmet>
 
       <NavBar />
-      <Header />
       <SwiperNav />
       <ChangeDivisas />
       <CHome />
