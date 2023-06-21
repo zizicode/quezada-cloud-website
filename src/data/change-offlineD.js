@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 const changeOffline = () => {
     return [{"currencyCode":"USD","currencyName":"Dolares Americanos","currencyFullName":"Dolares Americanos EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":54.3000,"saleRate":55.1000},{"currencyCode":"USD","currencyName":"Dolares Americanos","currencyFullName":"Dolares Americanos CK","instrumentCode":"CK","instrumentDescription":"Cheque","purchaseRate":53.8000,"saleRate":55.1000},{"currencyCode":"EUR","currencyName":"Euros","currencyFullName":"Euros EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":57.7000,"saleRate":60.2500},{"currencyCode":"CAD","currencyName":"Dolares Canadienses","currencyFullName":"Dolares Canadienses EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":37.0000,"saleRate":39.9000},{"currencyCode":"CHF","currencyName":"Francos Suizos","currencyFullName":"Francos Suizos EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":56.0000,"saleRate":58.9000},{"currencyCode":"GBP","currencyName":"Libras Esterlinas","currencyFullName":"Libras Esterlinas EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":63.0000,"saleRate":66.0000}]
 } 
 
+=======
+const changeOffline = () => {
+    return [{"currencyCode":"USD","currencyName":"Dolares Americanos","currencyFullName":"Dolares Americanos EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":54.3000,"saleRate":55.1000},{"currencyCode":"USD","currencyName":"Dolares Americanos","currencyFullName":"Dolares Americanos CK","instrumentCode":"CK","instrumentDescription":"Cheque","purchaseRate":53.8000,"saleRate":55.1000},{"currencyCode":"EUR","currencyName":"Euros","currencyFullName":"Euros EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":57.7000,"saleRate":60.2500},{"currencyCode":"CAD","currencyName":"Dolares Canadienses","currencyFullName":"Dolares Canadienses EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":37.0000,"saleRate":39.9000},{"currencyCode":"CHF","currencyName":"Francos Suizos","currencyFullName":"Francos Suizos EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":56.0000,"saleRate":58.9000},{"currencyCode":"GBP","currencyName":"Libras Esterlinas","currencyFullName":"Libras Esterlinas EF","instrumentCode":"EF","instrumentDescription":"Efectivo","purchaseRate":63.0000,"saleRate":66.0000}]
+} 
+
+>>>>>>> 42c6585 (Update main home)
 export default changeOffline;
