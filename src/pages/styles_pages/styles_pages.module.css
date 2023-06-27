@@ -238,6 +238,40 @@
 } */
 
 
+/* Container items contact. */
+.container_contact{
+    width: 96%;
+    margin: 10px 20px;
+}
+
+.container_contact .container_items{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    max-width: 400px;
+    margin: 20px auto;
+    
+}
+
+.container_contact p{
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+}
+
+.container_contact .container_items li{
+    width: 70px;
+}
+
+
+.container_contact .container_items li img{
+    width: 100%;
+}
+
+
 
 /* @ medias */
 
