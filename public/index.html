@@ -1,119 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
     <title>Agente de Cambio Quezada | Inicio</title>
-    
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="32x32">
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="32x32" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <script src="./main.js"></script>
 
     <!-- scripts -->
     <script type="text/javascript">
-        window.Trengo = window.Trengo || {};
-        window.Trengo.key = 'jRpEU55OMATtXY2nOu6f';
-        (function(d, script, t) {
-            script = d.createElement('script');
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = 'https://static.widget.trengo.eu/embed.js';
-            d.getElementsByTagName('head')[0].appendChild(script);
-        }(document));
-        </script>
-        
+      window.Trengo = window.Trengo || {};
+      window.Trengo.key = "jRpEU55OMATtXY2nOu6f";
+      (function (d, script, t) {
+        script = d.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "https://static.widget.trengo.eu/embed.js";
+        d.getElementsByTagName("head")[0].appendChild(script);
+      })(document);
+    </script>
 
-    <script src="https://qh788.infusionsoft.app/app/webTracking/getTrackingCode?b=1.70.0.496214" type="text/javascript">
-    </script>
-    <script src="https://qh788.infusionsoft.app/app/webform/overwriteRefererJs?b=1.70.0.496214" type="text/javascript">
-    </script>
-</head>
-<body>
+    <script
+      src="https://qh788.infusionsoft.app/app/webTracking/getTrackingCode?b=1.70.0.496214"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://qh788.infusionsoft.app/app/webform/overwriteRefererJs?b=1.70.0.496214"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
     <div id="root"></div>
-
-
 
     <!-- Scripts -->
     <script type="text/javascript">
-        function submitWebForm() {
-            var form = document.forms[0];
-            var resolution = document.createElement('input');
-            resolution.setAttribute('id', 'screenResolution');
-            resolution.setAttribute('type', 'hidden');
-            resolution.setAttribute('name', 'screenResolution');
-            var resolutionString = screen.width + 'x' + screen.height;
-            resolution.setAttribute('value', resolutionString);
-            form.appendChild(resolution);
-            var pluginString = '';
-            if (window.ActiveXObject) {
-                var activeXNames = {
-                    'AcroPDF.PDF': 'Adobe Reader',
-                    'ShockwaveFlash.ShockwaveFlash': 'Flash',
-                    'QuickTime.QuickTime': 'Quick Time',
-                    'SWCtl': 'Shockwave',
-                    'WMPLayer.OCX': 'Windows Media Player',
-                    'AgControl.AgControl': 'Silverlight'
-                };
-                var plugin = null;
-                for (var activeKey in activeXNames) {
-                    try {
-                        plugin = null;
-                        plugin = new ActiveXObject(activeKey);
-                    } catch (e) {
-                        // do nothing, the plugin is not installed
-                    }
-                    pluginString += activeXNames[activeKey] + ',';
-                }
-                var realPlayerNames = ['rmockx.RealPlayer G2 Control',
-                    'rmocx.RealPlayer G2 Control.1',
-                    'RealPlayer.RealPlayer(tm) ActiveX Control (32-bit)',
-                    'RealVideo.RealVideo(tm) ActiveX Control (32-bit)',
-                    'RealPlayer'];
-                for (var index = 0; index < realPlayerNames.length; index++) {
-                    try {
-                        plugin = new ActiveXObject(realPlayerNames[index]);
-                    } catch (e) {
-                        continue;
-                    }
-                    if (plugin) {
-                        break;
-                    }
-                }
-                if (plugin) {
-                    pluginString += 'RealPlayer,';
-                }
-            } else {
-                for (var i = 0; i < navigator.plugins.length; i++) {
-                    pluginString += navigator.plugins[i].name + ',';
-                }
+      function submitWebForm() {
+        var form = document.forms[0];
+        var resolution = document.createElement("input");
+        resolution.setAttribute("id", "screenResolution");
+        resolution.setAttribute("type", "hidden");
+        resolution.setAttribute("name", "screenResolution");
+        var resolutionString = screen.width + "x" + screen.height;
+        resolution.setAttribute("value", resolutionString);
+        form.appendChild(resolution);
+        var pluginString = "";
+        if (window.ActiveXObject) {
+          var activeXNames = {
+            "AcroPDF.PDF": "Adobe Reader",
+            "ShockwaveFlash.ShockwaveFlash": "Flash",
+            "QuickTime.QuickTime": "Quick Time",
+            SWCtl: "Shockwave",
+            "WMPLayer.OCX": "Windows Media Player",
+            "AgControl.AgControl": "Silverlight",
+          };
+          var plugin = null;
+          for (var activeKey in activeXNames) {
+            try {
+              plugin = null;
+              plugin = new ActiveXObject(activeKey);
+            } catch (e) {
+              // do nothing, the plugin is not installed
             }
-            pluginString = pluginString.substring(0, pluginString.lastIndexOf(','));
-            var plugins = document.createElement('input');
-            plugins.setAttribute('id', 'pluginList');
-            plugins.setAttribute('type', 'hidden');
-            plugins.setAttribute('name', 'pluginList');
-            plugins.setAttribute('value', pluginString);
-            form.appendChild(plugins);
-            var java = navigator.javaEnabled();
-            var javaEnabled = document.createElement('input');
-            javaEnabled.setAttribute('id', 'javaEnabled');
-            javaEnabled.setAttribute('type', 'hidden');
-            javaEnabled.setAttribute('name', 'javaEnabled');
-            javaEnabled.setAttribute('value', java);
-            form.appendChild(javaEnabled);
-            jQuery('.infusion-submit button').attr('disabled', true);
-
-
-            
+            pluginString += activeXNames[activeKey] + ",";
+          }
+          var realPlayerNames = [
+            "rmockx.RealPlayer G2 Control",
+            "rmocx.RealPlayer G2 Control.1",
+            "RealPlayer.RealPlayer(tm) ActiveX Control (32-bit)",
+            "RealVideo.RealVideo(tm) ActiveX Control (32-bit)",
+            "RealPlayer",
+          ];
+          for (var index = 0; index < realPlayerNames.length; index++) {
+            try {
+              plugin = new ActiveXObject(realPlayerNames[index]);
+            } catch (e) {
+              continue;
+            }
+            if (plugin) {
+              break;
+            }
+          }
+          if (plugin) {
+            pluginString += "RealPlayer,";
+          }
+        } else {
+          for (var i = 0; i < navigator.plugins.length; i++) {
+            pluginString += navigator.plugins[i].name + ",";
+          }
         }
+        pluginString = pluginString.substring(0, pluginString.lastIndexOf(","));
+        var plugins = document.createElement("input");
+        plugins.setAttribute("id", "pluginList");
+        plugins.setAttribute("type", "hidden");
+        plugins.setAttribute("name", "pluginList");
+        plugins.setAttribute("value", pluginString);
+        form.appendChild(plugins);
+        var java = navigator.javaEnabled();
+        var javaEnabled = document.createElement("input");
+        javaEnabled.setAttribute("id", "javaEnabled");
+        javaEnabled.setAttribute("type", "hidden");
+        javaEnabled.setAttribute("name", "javaEnabled");
+        javaEnabled.setAttribute("value", java);
+        form.appendChild(javaEnabled);
+        jQuery(".infusion-submit button").attr("disabled", true);
+      }
     </script>
-    <script type="text/javascript" src="https://qh788.infusionsoft.app/app/webTracking/getTrackingCode"></script>
-    <script type="text/javascript"
-        src="https://qh788.infusionsoft.com/app/timezone/timezoneInputJs?xid=214c21b65a8f299aead07528d5c641e1"></script>
-    <script type="text/javascript" src="https://qh788.infusionsoft.com/js/jquery/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="https://qh788.infusionsoft.com/js/infusionsoft.js"></script>
-    <script type="text/javascript"
-        src="https://qh788.infusionsoft.com/resources/component/calendar/calendar.js"></script>
-</body>
+    <script
+      type="text/javascript"
+      src="https://qh788.infusionsoft.app/app/webTracking/getTrackingCode"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://qh788.infusionsoft.com/app/timezone/timezoneInputJs?xid=214c21b65a8f299aead07528d5c641e1"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://qh788.infusionsoft.com/js/jquery/jquery-3.3.1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://qh788.infusionsoft.com/js/infusionsoft.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://qh788.infusionsoft.com/resources/component/calendar/calendar.js"
+    ></script>
+  </body>
 </html>

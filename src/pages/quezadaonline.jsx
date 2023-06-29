@@ -7,9 +7,18 @@ import NavBar from '../../src/components/navbar/NavBar';
 import Solicitar from "../components/Modal/Solicitar";
 import styles from "./styles_pages/styles_pages.module.css";
 
+// icons
+import {BsWhatsapp} from 'react-icons/bs';
+import {MdOutlineMailOutline} from 'react-icons/md';
+import {HiOutlineChatAlt2} from 'react-icons/hi';
+
 const Image_dispositivos = require.context("../../public/online_acq", true);
 
 const Quezadaonline = () => {
+
+  function openChat(){
+    window.Trengo.Api.Widget.open('chat')
+  }
 
   // State loadPage
   const [load, setLoad] = useState('Load');
@@ -31,7 +40,7 @@ const Quezadaonline = () => {
       }, 1500);
     }
   })
-  //END State loadPage
+  //END State load Page
 
 
   return (
@@ -82,6 +91,7 @@ const Quezadaonline = () => {
                 <iframe src="https://www.youtube.com/embed/_IgSb7H5MPM?controls=0" title="Quezada Agente de cambio" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -90,9 +100,15 @@ const Quezadaonline = () => {
         <div className={styles.forma}>
           <h3>¡Cambiar Online nunca fue tan fácil! </h3>
 
-          <p>
+          <div className={styles.container_option}>
+            <a href="https://api.whatsapp.com/send/?phone=18095565111&text&app_absent=0"><BsWhatsapp/> Whatsapp</a>
+            <a href="mailto:divisas@agentedecambioquezada.com"><MdOutlineMailOutline/> Correo</a>
+            <button onClick={() => openChat()}><HiOutlineChatAlt2/> Chat online</button>
+          </div>
+
+          {/* <p>
             Contamos con distintas vías de comunicación: Número de WhatsApp: <a href="tel:8095562702">809 556-2702</a> para asistirte en tus cambios de divisas, <a href="mailto:divisas@agentedecambioquezada.com">Correo Electronico</a>. El live chat en nuestra web, en donde con gusto uno de nuestros representantes te atenderá. Gracia a nuestro proyecto online, no tienes que abandonar tu hogar y oficina para cambiar tus divisas.
-          </p>
+          </p> */}
 
           <div className="container_solicitar-tasa">
               <Solicitar />
