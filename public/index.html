@@ -12,8 +12,9 @@
 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="32x32" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <script src="./main.js"></script>
 
     <!-- scripts -->
     <script type="text/javascript">
@@ -41,7 +42,10 @@
     <div id="root"></div>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
+      AOS.init();
+
       function submitWebForm() {
         var form = document.forms[0];
         var resolution = document.createElement("input");
