@@ -53,8 +53,8 @@ const Calculator = () => {
 
         try {
             axios.get(`${baseURL}`).then((response) => {
-                setChangeD(response.data);
-                setSales(response.data[0]);
+                    setChangeD(response.data);
+                    setSales(response.data[0]);
             }).catch(function (error) {
                 console.log('net::ERR_INTERNET_DISCONNECTED');
                 setChangeD(changeOffline);
@@ -75,7 +75,7 @@ const Calculator = () => {
             divisas();
         }, 180000);
 
-    }, [setChangeD]);
+    }, [setSales]);
 
 
     // Open moral calculator
@@ -84,12 +84,12 @@ const Calculator = () => {
     const handleClose = () => setOpen(false);
 
     //Calculadora funtion
-    const formato = new Intl.NumberFormat('es-ES', {
-        style: 'currency',
-        currency: Sales.currencyCode,
-        minimumFractionDigits: 2,
-        minimumIntegerDigits: 1,
-    });
+    // const formato = new Intl.NumberFormat('es-ES', {
+    //     style: 'currency',
+    //     currency: Sales.currencyCode,
+    //     minimumFractionDigits: 2,
+    //     minimumIntegerDigits: 1,
+    // });
     const [valorInput, setValorInput] = useState(1);
 
     function calculator(valor) {
@@ -106,6 +106,11 @@ const Calculator = () => {
     // Calcular operacion / name
     let name_operation = 'Solicita operacion';
     let components = 'component';
+
+    let PriceCompra = (valorInput / Sales.saleRate);
+    PriceCompra = PriceCompra.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    console.log(Sales);
+    let PriceVenta = (Sales.purchaseRate * valorInput);
 
 
 
@@ -184,7 +189,7 @@ const Calculator = () => {
 
                                         <div>
                                             <small>Recibes:</small>
-                                            <p><span>Venta: DOP$</span> {formato.format((Sales.purchaseRate * valorInput))}</p>
+                                            <p><span>Venta: </span> {PriceVenta.toLocaleString('es-DO', { style: 'currency', currency: 'DOP' })}</p>
                                         </div>
                                     </div>
                                     <div className="ventas">
@@ -195,7 +200,7 @@ const Calculator = () => {
 
                                         <div>
                                             <small>Recibes:</small>
-                                            <p><span>Compra: {Sales.currencyCode}$</span> {formato.format((valorInput / Sales.saleRate))}</p>
+                                            <p><span>Compra: </span> USD${ PriceCompra.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }</p>
                                         </div>
                                     </div>
                                 </div>
