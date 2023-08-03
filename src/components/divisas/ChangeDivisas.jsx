@@ -1,10 +1,14 @@
 import React from "react";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import "../../components/divisas/change-divisas.css";
 import UrlChange from "../../data/changeD";
 import changeOfflineD from "../../data/change-offlineD";
 import Calculator from "./calculator/calculator";
+
+// Data API
+import { fetchTasas } from "../../services/rates/rates";
 
 // Svg Ads
 import ads from "../../assets/svg/ads-advertising.svg";
@@ -37,6 +41,22 @@ const ChangeDivisas = () => {
       return error.response;
     }
   }
+
+
+  // Nuevas tasas
+  const tasasOffline = changeOffline;
+
+  useEffect(() => {
+    // Llamar a fetchTasas cada minuto
+    const interval = setInterval(() => {
+      fetchTasas(setChangeD, tasasOffline);
+    }, 60000); // 60000 ms = 1 minuto
+
+    // Limpiar el intervalo cuando el componente se desmonte
+    return () => clearInterval(interval);
+  }, [tasasOffline]);
+
+
 
   React.useEffect(() => {
     // Inicializar tasas:
@@ -138,7 +158,7 @@ const ChangeDivisas = () => {
             </ul>
 
             {/* Button open moral calculator */}
-            <Calculator />
+            <Calculator rates={changeD} />
           </div>
         </div>
       </div>

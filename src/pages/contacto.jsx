@@ -129,20 +129,20 @@ const Contacto = () => {
               name="name"
               type="text"
               className={styles.feedback_input}
-              placeholder="Name"
+              placeholder="Nombre"
             />
             <input
               name="email"
               type="text"
               className={styles.feedback_input}
-              placeholder="Email"
+              placeholder="Correo"
             />
             <textarea
               name="text"
               className={styles.feedback_input}
-              placeholder="Comment"
+              placeholder="Comentario"
             ></textarea>
-            <input type="submit" value="SUBMIT" />
+            <input type="submit" value="Enviar" />
           </form>
           <Solicitar />
         </div>

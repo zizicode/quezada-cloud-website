@@ -357,7 +357,8 @@
 .container-wrapper {
     position: relative;
     width: 100%;
-    background-color: rgba(137, 236, 57, 1);
+    background: rgb(250,250,250);
+    background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(241,241,241,1) 100%);
     padding: 50px 0 20px 0;
   }
   
@@ -377,7 +378,7 @@
 
   .container-title-wrapper{
     text-align: center;
-    color: #EEEEEE;
+    color: var(--text-azul);
   }
   
   .title {

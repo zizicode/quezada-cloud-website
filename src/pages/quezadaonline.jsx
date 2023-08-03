@@ -66,7 +66,7 @@ const Quezadaonline = () => {
         <div className={styles.sib_info}>
           <div className={styles.container_sib}>
             <div className={styles.info_sib}>
-              <h2>¿Como puedo beneficiar de Quezada Online?
+              <h2>¿Cómo puedo beneficiar de Quezada Online?
               </h2>
               <p>
                 ¡Ahora no tienes que salir de tu casa u oficina para hacer una

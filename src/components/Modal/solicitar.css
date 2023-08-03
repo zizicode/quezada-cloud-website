@@ -94,3 +94,24 @@
     border-radius: 8px;
     font-weight: bold;
 }
+
+
+/* Boton de solicitar tasa desde Swipper - slider header */
+.solicitar_tasa_swipper.MuiButtonBase-root{
+    padding: 6px 10px;
+    background-color: rgba(126, 216, 52, 1);
+    border: 1px solid rgb(92, 179, 21);
+}
+
+.solicitar_tasa_swipper.MuiButtonBase-root:hover{
+    background-color: #81cc43;
+    align-items: start;
+}
+
+
+/* screen 1290px - monitor de 19 pulgadas */
+@media (max-width: 460px) {
+    .solicitar_tasa_swipper.MuiButtonBase-root{
+        font-size: 17px;
+    }
+}

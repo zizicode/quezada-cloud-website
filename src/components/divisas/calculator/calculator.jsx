@@ -1,10 +1,7 @@
 import React from "react";
-import axios from "axios";
 import { useState } from "react";
 import Solicitar from "../../Modal/Solicitar";
 import "../../../components/divisas/change-divisas.css";
-import UrlChange from '../../../data/changeD';
-import changeOfflineD from "../../../data/change-offlineD";
 
 // Iconos
 import { AiOutlineClose } from 'react-icons/ai';
@@ -32,11 +29,7 @@ const style = {
     p: 2,
 };
 
-// Traer la Url de la api Rates
-const baseURL = UrlChange();
-const changeOffline = changeOfflineD();
-
-const Calculator = () => {
+const Calculator = (props) => {
 
 
     // Fecha y hora
@@ -45,38 +38,8 @@ const Calculator = () => {
     const fecha = hoy.getDate() + '-' + (hoy.getMonth() + 1) + '-' + hoy.getFullYear();
 
 
-    const [changeD, setChangeD] = useState(changeOffline);
-    const [Sales, setSales] = useState(changeOffline[0]);
-
-    function divisas() {
-        // var token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlJhdGVzYXBpIiwiZ2l2ZW5fbmFtZSI6IkFQSSBUYXNhcyIsIkNsaWVudElkIjoiNkQ3QjlGOUYtOEMwRC00NDYwLTkwQkMtOUNGRTI0NzFCRUEzIiwibmJmIjoxNTc2NTkzMTAxLCJleHAiOjE1NzY2Nzk1MDEsImlhdCI6MTU3NjU5MzEwMX0.sc0MnipMqzo8ICQWdRN2UB964QT0v3rjlrO2F0CN5aet4z-9fhFAA1habup4iByalWONtyGHvnPm90F1FH4Ohw';
-
-        try {
-            axios.get(`${baseURL}`).then((response) => {
-                    setChangeD(response.data);
-                    setSales(response.data[0]);
-            }).catch(function (error) {
-                console.log('net::ERR_INTERNET_DISCONNECTED');
-                setChangeD(changeOffline);
-                setSales(changeOffline[0]);
-            })
-
-        } catch (error) {
-            console.log(error.response);
-            return error.response;
-        }
-    }
-
-    React.useEffect(() => {
-
-        // Inicializar tasas: 
-        divisas();
-        setInterval(() => {
-            divisas();
-        }, 180000);
-
-    }, [setSales]);
-
+    const changeD = props.rates;
+    const [Sales, setSales] = useState(changeD[0]);
 
     // Open moral calculator
     const [open, setOpen] = React.useState(false);
@@ -109,7 +72,6 @@ const Calculator = () => {
 
     let PriceCompra = (valorInput / Sales.saleRate);
     PriceCompra = PriceCompra.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-    console.log(Sales);
     let PriceVenta = (Sales.purchaseRate * valorInput);
 
 
