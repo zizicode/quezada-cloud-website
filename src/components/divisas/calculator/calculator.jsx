@@ -1,9 +1,7 @@
 import React from "react";
-// import axios from "axios";
 import { useState, useEffect } from "react";
 import Solicitar from "../../Modal/Solicitar";
 import "../../../components/divisas/change-divisas.css";
-// import UrlChange from '../../../data/changeD';
 import changeOfflineD from "../../../data/change-offlineD";
 
 // Iconos
@@ -14,12 +12,6 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 
-// import InputLabel from '@mui/material/InputLabel';
-// import FormControl from '@mui/material/FormControl';
-// import NativeSelect from '@mui/material/NativeSelect';
-
-// import InputAdornment from '@mui/material/InputAdornment';
-// import TextField from '@mui/material/TextField';
 
 // Styles moral
 const style = {
@@ -160,7 +152,9 @@ const Calculator = (props) => {
                 <div className="converter_sale">
                   <div className="container_value_operation">
                     <div>
-                      <label>Monto:</label>
+                      <label>Monto en {operationType === "buy"
+                          ? "Pesos"
+                          : rates[selectedCurrency].currencyCode}</label>
                       <input
                         type="number"
                         style={{ textAlign: "center" }}

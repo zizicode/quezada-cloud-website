@@ -1,18 +1,18 @@
-.container__divisas{
+.container__divisas {
     width: 100%;
     min-height: 10rem;
     background: #fafafa;
     position: relative;
 }
 
-.container_divisas{
+.container_divisas {
     width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: .4rem 1rem 3rem 1rem;
 }
 
-.container_divisas .panel_change{
+.container_divisas .panel_change {
     width: 60%;
     height: 100%;
     min-width: 300px;
@@ -21,12 +21,12 @@
     text-align: center;
 }
 
-.container_divisas .panel_change h2{
+.container_divisas .panel_change h2 {
     color: var(--text-azul);
     margin-bottom: .4rem;
 }
 
-.change{
+.change {
     width: 100%;
     display: grid;
     background-color: var(--blanco);
@@ -38,7 +38,7 @@
 
 
 /*================================== Splash ==================================*/
-.splash{
+.splash {
     position: relative;
     margin: 2rem auto;
     max-width: 600px;
@@ -60,10 +60,11 @@
     background-color: rgba(137, 236, 57, 1);
 }
 
-.button_splash a{
+.button_splash a {
     color: white;
 }
-.splash > .ads{
+
+.splash>.ads {
     position: absolute;
     top: -50px;
     left: 70px;
@@ -74,27 +75,27 @@
     /* background-color: #fafafa; */
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-    
+
 }
 
-.splash > .ads img{
+.splash>.ads img {
     width: 90%;
 }
 
 
-.splash > h2{
+.splash>h2 {
     font-size: 1.5rem;
 }
 
-.splash > span{
+.splash>span {
     font-size: 1rem;
     font-weight: 400;
     color: #2E2E2E;
 }
 
-.splash .button_splash{
+.splash .button_splash {
     position: relative;
-    padding:  1rem;
+    padding: 1rem;
     border-radius: 4px;
     color: #fcfcfc;
     background: var(--text-azul);
@@ -107,7 +108,7 @@
 
 /* ================== Tablero Divisas Change =============== */
 
-.change_divisa{
+.change_divisa {
     margin: 0 auto;
     padding: 2rem .2rem;
     width: 60%;
@@ -118,19 +119,21 @@
 }
 
 
-.change_divisa .line::before{
+.change_divisa .line::before {
     content: '';
     border: 2px solid var(--verde);
-    border-radius: 2px;margin-right: 5px;
+    border-radius: 2px;
+    margin-right: 5px;
 }
-.change_divisa .line::after{
+
+.change_divisa .line::after {
     content: '';
     border: 2px solid var(--verde);
     border-radius: 2px;
     margin-left: 5px;
 }
 
-.change_divisa .line small{
+.change_divisa .line small {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;
@@ -140,7 +143,7 @@
 
 /* ================= Divisas ===================*/
 
-.change ul{
+.change ul {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -149,65 +152,65 @@
     padding: 1.4rem;
 }
 
-.change ul li small{
+.change ul li small {
     font-size: .9rem;
     color: #272727;
 }
 
 
-.change ul li #divisa{
+.change ul li #divisa {
     width: 3rem;
     height: 3rem;
     border-radius: 3rem;
     margin: auto auto 10px auto;
     cursor: pointer;
     transition: all 100ms linear;
-    
+
 }
 
 .compra1 h3 small,
-.venta1 h3 small{
+.venta1 h3 small {
     font-size: 20px;
 }
 
 
 /* =================== image divisas ==================== */
-.dolar1 #divisa{
+.dolar1 #divisa {
     background-image: url('../../assets/bandera/bandera_americana.webp');
     background-size: cover;
     object-fit: cover;
     background-position: center;
 }
 
-.dolar2 #divisa{
+.dolar2 #divisa {
     background-image: url('../../assets/bandera/bandera_americana.webp');
     background-size: cover;
     object-fit: cover;
     background-position: center;
 }
 
-.dolar3 #divisa{
+.dolar3 #divisa {
     background-image: url('../../assets/bandera/bandera_canadiense.webp');
     background-size: cover;
     object-fit: cover;
     background-position: center;
 }
 
-.euro1 #divisa{
+.euro1 #divisa {
     background-image: url('../../assets/bandera/bandera_europea.webp');
     background-size: cover;
     object-fit: cover;
     background-position: center;
 }
 
-.franco1 #divisa{
+.franco1 #divisa {
     background-image: url('../../assets/bandera/bandera_zuisa.webp');
     background-size: cover;
     object-fit: cover;
     background-position: center;
 }
 
-.esterlina1 #divisa{
+.esterlina1 #divisa {
     background-image: url('../../assets/bandera/bandera_reino_unido.webp');
     background-size: cover;
     object-fit: cover;
@@ -217,12 +220,12 @@
 
 /* =============== Calculator ========================= */
 
-.calculator{
+.calculator {
     padding: 10px;
     margin: 10px auto 20px auto;
 }
 
-.calculator button{
+.calculator button {
     padding: 10px 15px;
     font-weight: 500;
     border-radius: 10px;
@@ -231,18 +234,18 @@
     cursor: pointer;
 }
 
-.calculator button:hover{
+.calculator button:hover {
     background-color: #89EC39;
 }
 
 /* =============== Moral calculator ========================= */
-.container_calculator{
+.container_calculator {
     position: relative;
-    min-width:300px;
+    min-width: 300px;
     padding: 10px;
 }
 
-.title_calculator{
+.title_calculator {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,11 +253,11 @@
     margin-bottom: 20px;
 }
 
-.title_calculator h2{
+.title_calculator h2 {
     font-size: 1.3rem;
 }
 
-.title_calculator .date{
+.title_calculator .date {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,17 +265,18 @@
     font-size: .9rem;
 }
 
-.container_converter{
+.container_converter {
     width: 100%;
     height: auto;
-    background-color: #ffffff;
+    padding: 20px 0;
+    border-radius: 5px;
 
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
 }
 
-.css-f4c2o3{
+.css-f4c2o3 {
     max-width: 500px;
     width: calc(96% - 10px);
 }
@@ -281,7 +285,8 @@
 .converter_sed {
     width: 100%;
 }
-.converter_sed .type_operation{
+
+.converter_sed .type_operation {
     width: 100%;
     padding: 10px;
 
@@ -292,7 +297,7 @@
     align-items: center;
 }
 
-.converter_sed .type_operation div{
+.converter_sed .type_operation div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,53 +305,67 @@
     gap: 10px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-input[type=number] { appearance:textfield; }
+input[type=number] {
+    appearance: textfield;
+}
 
 
-.converter_sed .type_operation div label{
+.converter_sed .type_operation div label {
     font-weight: 600;
 }
 
-.converter_sed .type_operation div input[type=number]{
+.converter_sed .type_operation div input[type=number] {
     text-align: center;
 }
 
-.converter_sale{
+.converter_sale {
     width: 100%;
     margin: 30px auto auto auto;
+    background-color: rgba(23, 211, 6, 0.02);
+    border: 3px dashed #DCEAEB;
+    border-radius: 13px;
+    padding: 20px 0;
 }
 
-.converter_sale .container_value_operation{
+.converter_sale .container_value_operation {
     width: calc(100%);
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     justify-content: center;
     align-items: center;
-    align-self: center;
-    gap: 10px;
 }
 
 
-.converter_sale .container_value_operation div{
+.converter_sale .container_value_operation div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.converter_sale .container_value_operation div select,
+.converter_sale .container_value_operation div input[type=number] {
+    height: 25px;
+    cursor: pointer;
+    margin-top: 3px;
+    border-radius: 6px;
+    text-align: center;
+}
 
-.converter_sale .container_value_operation div label{
+
+
+.converter_sale .container_value_operation div label {
     font-size: 11px;
     font-weight: 600;
 }
 
-.converter_sale .result_calculo{
+.converter_sale .result_calculo {
     width: 50%;
     margin: 40px auto auto auto;
 
@@ -356,56 +375,56 @@ input[type=number] { appearance:textfield; }
     justify-content: center;
 }
 
-.converter_sale .result_calculo div{
+.converter_sale .result_calculo div {
     text-align: center;
 }
 
-.converter_sale .result_calculo div.success{
+.converter_sale .result_calculo div.success {
     font-size: 18px;
     color: rgb(23, 211, 6);
 }
 
-.converter_sale .result_calculo div.danger{
+.converter_sale .result_calculo div.danger {
     font-size: 18px;
     color: rgb(211, 30, 6);
 }
 
-.converter_sale .result_calculo div:nth-child(2){
+.converter_sale .result_calculo div:nth-child(2) {
     font-size: 13px;
     font-weight: 600;
     color: black;
 }
 
-.container_solicitar-tasa{
+.container_solicitar-tasa {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container_solicitar-tasa > .description_swiper{ 
+.container_solicitar-tasa>.description_swiper {
     width: max-content;
 }
 
-.container_solicitar-tasa > .description_swiper .solicitar{ 
+.container_solicitar-tasa>.description_swiper .solicitar {
     background-color: #91dc55;
     border: none;
 }
 
 
-.Close_modal{
+.Close_modal {
     padding: 3px 4px;
     font-size: 25px;
     color: #AEAEAE;
     border: 1px solid #EEEEEE;
-    border-radius:7px;
+    border-radius: 7px;
     background-color: #FBFBFB;
     cursor: pointer;
     transition: ease .19s;
     font-weight: 600;
 }
 
-.Close_modal:hover{
+.Close_modal:hover {
     background-color: #F85151;
     color: white;
     border: 1px solid #DA3131;
@@ -416,85 +435,84 @@ input[type=number] { appearance:textfield; }
 .container-wrapper {
     position: relative;
     width: 100%;
-    background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(241,241,241,1) 100%);
+    background: linear-gradient(0deg, rgba(250, 250, 250, 1) 0%, rgba(241, 241, 241, 1) 100%);
     padding: 50px 0 20px 0;
-  }
-  
-  .video-wrapper {
+}
+
+.video-wrapper {
     position: relative;
     padding: 50px 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .video-wrapper iframe {
+}
+
+.video-wrapper iframe {
     max-width: 100%;
     max-height: 100%;
-  }
+}
 
-  .container-title-wrapper{
+.container-title-wrapper {
     text-align: center;
     color: var(--text-azul);
-  }
-  
-  .title {
+}
+
+.title {
     font-size: 24px;
     margin-bottom: 3px;
     padding: 0 10px;
-  }
-  
-  .description {
+}
+
+.description {
     font-size: 18px;
-  }
+}
 
 
 
 /* =============== Funcionalidad ========================= */
 
-.change ul li > .active_divisa#divisa{
+.change ul li>.active_divisa#divisa {
     border: .3rem solid var(--verde);
 }
 
 
-@media only screen and (max-width:1065px){
-   
+@media only screen and (max-width:1065px) {}
 
-}
-
-@media only screen and (max-width:900px){
-    .container_divisas .panel_change{
+@media only screen and (max-width:900px) {
+    .container_divisas .panel_change {
         width: var(--container-width-md);
     }
 }
 
-@media only screen and (max-width:600px){
-    .container_divisas .panel_change{
+@media only screen and (max-width:600px) {
+    .container_divisas .panel_change {
         width: 95%;
         height: 100%;
         min-width: 300px;
         margin: 0 auto;
         text-align: center;
     }
-    .change_divisas{
+
+    .change_divisas {
         padding: 1rem 0rem 3rem 0rem;
         display: grid;
         grid-template-columns: 30% 30% 30%;
     }
 
-    .line{
+    .line {
         min-width: 100px;
     }
 
-    .change ul{
+    .change ul {
         padding: .5rem;
     }
 
-    .change ul li small{
+    .change ul li small {
         display: none;
     }
-    .dolar2{
+
+    .dolar2 {
         display: none;
     }
 }
