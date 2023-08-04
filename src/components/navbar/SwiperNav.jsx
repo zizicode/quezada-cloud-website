@@ -1,84 +1,95 @@
-import React, { useState } from "react";
-// Import Swiper React components
-import { Autoplay, EffectFade } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css'; // Asegúrate de importar los estilos de Swiper
 import "./swiper.css";
-import "swiper/css/autoplay";
-import "swiper/css/effect-fade";
-// import Solicitar from "../Modal/Solicitar";
+import SwiperCore, { Autoplay, Navigation, EffectFade } from 'swiper'; // Importa el módulo de navegación
+// import required modules
+// import { Pagination  } from 'swiper/modules';
 
-// import image header
+// Button Solicitar Tasa
+import Solicitar from '../Modal/Solicitar';
+
+SwiperCore.use([Navigation]); // Instala el módulo de navegación
+
+// Imagenes swipper
 const ImaSwiper = require.context("../../assets", true);
 
 const SwiperNav = () => {
-  // store swiper instance
-  const [swiper, setSwiper] = useState(null);
 
-  const slideTo = (index) => swiper.slideTo(index);
-  console.log(slideTo);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  // const solicitar = "https://quezada.do/divisas.html";
-  // const whatsapp = "https://api.whatsapp.com/send/?phone=18095565111&text&app_absent=0";
-  //Configuracion del Swiper Slider
-  const params = {
-    modules: [EffectFade, Autoplay],
-    effect: "fade",
-    spaceBetween: 0,
-    autoplay: {
-      delay: 4500,
-      disableOnInteraction: false,
-    },
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
   };
 
-  return (
-    // onSlideChange={() => setActive("text-animated")}
-    <Swiper {...params}  className="Header_swipe">
-      <div className="caja_"></div>
-      <div className="container_button_swiper">
-        {/* <div className="container_item_swiper">
-          <h1 className="item-title">Cambia divisas fácil y rápido, online o en alguna de nuestras oficinas</h1>
-          <p className="info"></p>
-        </div> */}
+  const swiperOptions = {
+    modules: [EffectFade], //Efecto transition
+    effect: "fade", //Efecto
+    slidesPerView: 1, // Número de slides visibles
+    spaceBetween: 0, // Espacio entre cada slide
+    autoplay: {
+      delay: 7200,
+      disableOnInteraction: false,
+    },
+    navigation: { // Habilita los botones de siguiente y anterior
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  };
 
-        <div className="container_img-sib">
-          <div className="img_sib">
-            <img src={ImaSwiper`./sello_png1.png`} alt="sib" />
+  const subInfo = 'Cambiar divisas fácil y rápido, online o en una de nuestras empresas.'
+  return (
+    <div>
+      <Swiper {...swiperOptions}
+        loop={true}
+        modules={[Autoplay, Navigation, EffectFade]}
+        onSlideChange={handleSlideChange}
+        className="mySwiper">
+
+        <SwiperSlide style={{ backgroundImage: 'url(' + ImaSwiper`./quezada1.webp` + ')' }}>
+          <div className="grid-container-swipper">
+            <div className="column-1-swipper">
+              <p>{subInfo}</p>
+              <div className="barra_br"></div>
+              <div className="constainer_solicitar_tasa_swipper">
+                <Solicitar name={'Solicitar Tasa'} stylec={'solicitar_tasa_swipper'} className='solicitar_tasa_swipper' />
+              </div>
+            </div>
+            <div className="column-2-swipper">
+              <div className="container-sib-swiper">
+                <img src={ImaSwiper`./sello_png1.png`} alt="SIB" />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <SwiperSlide className="quezada__principal image_header_swiper">
-        <img src={ImaSwiper`./HR-46.webp`} alt="header" />
-        <div className="container-animated">
-        <div className="text-animated">Transferencias</div>
-          {/* <div className="sub-text-animated">
-            Lorem Ipsum is simply dummy text of the printing and typesettin
-          </div> */}
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="quezada__principal image_header_swiper">
-        <img src={ImaSwiper`./corporativo-15.jpeg`} alt="header" />
-        <div className="container-animated">
-          <div className="text-animated">Avances de efectivo con tarjeta</div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="quezada__principal image_header_swiper">
-        <img src={ImaSwiper`./quezada1.webp`} alt="header" />
-        <div className="container-animated">
-        <div className="text-animated">Quezada Agente de cambio</div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="quezada__principal image_header_swiper">
-        <img src={ImaSwiper`./administracion.jpg`} alt="header" />
-        <div className="container-animated">
-          <div className="text-animated">Cambio de Divisas</div>
-        </div>
-      </SwiperSlide>
-    </Swiper>
-  );
-};
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundImage: 'url(' + ImaSwiper`./HR-46.webp` + ')' }}>
+          <div className={`animation-container ${activeIndex === 0 ? 'active' : ''}`}>
+            <div className="animation-show">
+              <h3>Transferencias</h3>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundImage: 'url(' + ImaSwiper`./administracion.jpg` + ')' }}>
+        <div className={`animation-container ${activeIndex === 1 ? 'active' : ''}`}>
+            <div className="animation-show">
+              <h3>Cambio de Divisas</h3>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundImage: 'url(' + ImaSwiper`./corporativo-15.jpeg` + ')' }}>
+        <div className={`animation-container ${activeIndex === 2 ? 'active' : ''}`}>
+            <div className="animation-show">
+              <h3>Avances de efectivo con tarjeta</h3>
+            </div>
+          </div>
+        </SwiperSlide>
+        {/* Agrega más Slides con diferentes imágenes de fondo si es necesario */}
+      </Swiper>
+      {/* Agrega los botones de siguiente y anterior */}
+      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
+    </div>
+  )
+}
 
 export default SwiperNav;
