@@ -36,7 +36,7 @@ const SwiperNav = () => {
 
   return (
     // onSlideChange={() => setActive("text-animated")}
-    <Swiper {...params} nSwiper={setSwiper} className="Header_swipe">
+    <Swiper {...params}  className="Header_swipe">
       <div className="caja_"></div>
       <div className="container_button_swiper">
         {/* <div className="container_item_swiper">

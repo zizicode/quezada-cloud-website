@@ -138,7 +138,7 @@ const ChangeDivisas = () => {
             </ul>
 
             {/* Button open moral calculator */}
-            <Calculator />
+            <Calculator  rates={changeD} />
           </div>
         </div>
       </div>

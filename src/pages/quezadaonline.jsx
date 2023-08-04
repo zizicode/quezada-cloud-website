@@ -100,6 +100,10 @@ const Quezadaonline = () => {
         <div className={styles.forma}>
           <h3>¡Cambiar Online nunca fue tan fácil! </h3>
 
+          <h4>
+          Contamos con distintas vías de comunicación
+          </h4>
+
           <div className={styles.container_option}>
             <a href="https://api.whatsapp.com/send/?phone=18095565111&text&app_absent=0"><BsWhatsapp/> Whatsapp</a>
             <a href="mailto:divisas@agentedecambioquezada.com"><MdOutlineMailOutline/> Correo</a>
