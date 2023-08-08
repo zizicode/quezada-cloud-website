@@ -356,41 +356,29 @@ section.section{
 }
 
 .container_all{
-  height: 100%;
-  position: relative;
-  max-width: 1200px;
-  max-height: 950px;
-  padding: 20px;
-
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 10px auto;
-
+  width: 100%;
+  max-width: 1000px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  row-gap: 15px;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .section_container .card{
-  width: 100%;
-  min-width: 270px;
-  max-width: 400px;
+  width: min-content;
 
-  padding: 15px 10px;
-  border-radius: 8px;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin: 5px;
   background: rgba(255, 255, 255, 0.278);
   backdrop-filter: blur(10px);
+
+}
+
+.section_container .card p{
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
 }
 
 
@@ -428,6 +416,7 @@ section.section{
   
   transform: translateY(-20px);
 }
+
 
 @media only screen and (max-width:800px) {
   

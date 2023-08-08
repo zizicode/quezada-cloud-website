@@ -39,7 +39,7 @@ const Contacto = () => {
       <header className={styles.header}>
         <div className={styles.container_header}>
           <div className={styles.caja_gradient}>
-            <h1>CONTACTANOS</h1>
+            <h1>CONTÁCTANOS</h1>
           </div>
           <img src={Image`./administracion.jpg`} alt="Contacto" />
         </div>
@@ -142,7 +142,7 @@ const Contacto = () => {
               className={styles.feedback_input}
               placeholder="Comment"
             ></textarea>
-            <input type="submit" value="SUBMIT" />
+            <input type="submit" value="Enviar" />
           </form>
           <Solicitar />
         </div>

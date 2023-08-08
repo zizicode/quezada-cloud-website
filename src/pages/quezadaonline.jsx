@@ -8,11 +8,10 @@ import Solicitar from "../components/Modal/Solicitar";
 import styles from "./styles_pages/styles_pages.module.css";
 
 // icons
-import {BsWhatsapp} from 'react-icons/bs';
-import {MdOutlineMailOutline} from 'react-icons/md';
-import {HiOutlineChatAlt2} from 'react-icons/hi';
+
 
 const Image_dispositivos = require.context("../../public/online_acq", true);
+const Image_contact = require.context("../../src/assets", true);
 
 const Quezadaonline = () => {
 
@@ -66,7 +65,7 @@ const Quezadaonline = () => {
         <div className={styles.sib_info}>
           <div className={styles.container_sib}>
             <div className={styles.info_sib}>
-              <h2>¿Como puedo beneficiar de Quezada Online?
+              <h2>¿CÓmo puedo beneficiar de Quezada Online?
               </h2>
               <p>
                 ¡Ahora no tienes que salir de tu casa u oficina para hacer una
@@ -75,8 +74,7 @@ const Quezadaonline = () => {
               <p>
                 Con tan solo con unos clicks en nuestra página web o app móvil
                 puedes consultar las tasas, solicitar tasa preferencial y
-                solicitar tu operación de cambio por transferencia, servicio a
-                domicilio o en unas de nuestras sucursales. ¡Siempre con el mejor
+                solicitar tu operación de cambio por transferencia o en unas de nuestras sucursales. ¡Siempre con el mejor
                 servicio!
               </p>
               <p>
@@ -105,9 +103,19 @@ const Quezadaonline = () => {
           </h4>
 
           <div className={styles.container_option}>
-            <a href="https://api.whatsapp.com/send/?phone=18095565111&text&app_absent=0"><BsWhatsapp/> Whatsapp</a>
-            <a href="mailto:divisas@agentedecambioquezada.com"><MdOutlineMailOutline/> Correo</a>
-            <button onClick={() => openChat()}><HiOutlineChatAlt2/> Chat online</button>
+            <div className={styles.content_img}>
+              <a href="https://api.whatsapp.com/send/?phone=18095565111&text&app_absent=0"><img src={Image_contact`./whatsapp_png.png`} alt="whatsapp" /></a>
+            </div>
+
+            <div className={styles.content_img}>
+              <a href="mailto:divisas@agentedecambioquezada.com"><img src={Image_contact`./mail_png.webp`} alt="whatsapp" /></a>
+            </div>
+
+            <button onClick={() => openChat()} className={styles.content_img}>
+              <img src={Image_contact`./chat_png.png`} alt="whatsapp" />
+            </button>
+
+            {/* <button onClick={() => openChat()}><HiOutlineChatAlt2/> Chat online</button> */}
           </div>
 
           {/* <p>
