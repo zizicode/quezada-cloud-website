@@ -1,5 +1,6 @@
 const UrlChange = () => {
-    return 'http://quezada.dyndns.info:5000/obtenerDivisas';
+    return 'https://acq.mejiatavarez.com/obtenerDivisas';
+    // return 'http://quezada.dyndns.info:5000/obtenerDivisas';
 } 
 
 export default UrlChange;

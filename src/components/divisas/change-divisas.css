@@ -331,6 +331,7 @@ input[type=number] {
     border: 3px dashed #DCEAEB;
     border-radius: 13px;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 .converter_sale .container_value_operation {
@@ -381,12 +382,12 @@ input[type=number] {
 
 .converter_sale .result_calculo div.success {
     font-size: 18px;
-    color: rgb(23, 211, 6);
+    /* color: rgb(23, 211, 6); */
 }
 
 .converter_sale .result_calculo div.danger {
     font-size: 18px;
-    color: rgb(211, 30, 6);
+    /* color: rgb(211, 30, 6); */
 }
 
 .converter_sale .result_calculo div:nth-child(2) {
@@ -486,6 +487,15 @@ input[type=number] {
 }
 
 @media only screen and (max-width:600px) {
+
+    .container_calculator{
+        padding: 0;
+    }
+
+    .converter_sale .container_value_operation{
+        grid-template-columns: 35% auto;
+    }
+
     .container_divisas .panel_change {
         width: 95%;
         height: 100%;

@@ -68,7 +68,7 @@ const Contacto = () => {
             </section>
 
             <section className={styles.section}>
-              <h4>Tel & WhatSapp – Mesa de Divisas:</h4>
+              <h4>Tel & WhatsApp – Mesa de Divisas:</h4>
               <p>
                 <a href="tel:8095565111">(809) 556-5111</a>
               </p>
@@ -84,34 +84,35 @@ const Contacto = () => {
 
           <div className={styles.email}>
             <section className={styles.section}>
-              <h3>Contactar via Correo Electronico</h3>
+              <h3>Contactar vía Correo Electronico</h3>
             </section>
 
             <section className={styles.section}>
+              
+            <h5>Mesa de divisas:</h5>
               <p>
-                <h5>Mesa de divisas:</h5>
                 <li>
                   <a href="mailto:cambio@quezada.do">cambio@quezada.do</a>
                 </li>
               </p>
-              <p>
                 <h5>Contabilidad:</h5>
+              <p>
                 <li>
                   <a href="mailto:contabilidad@agentedecambioquezada.com">
                     Contabilidad@agentedecambioquezada.com
                   </a>
                 </li>
               </p>
-              <p>
                 <h5>Recursos Humanos:</h5>
+              <p>
                 <li>
                   <a href="mailto:rrhh@agentedecambioquezada.com">
                     rrhh@agentedecambioquezada.com
                   </a>
                 </li>
               </p>
-              <p>
                 <h5>Cumplimiento:</h5>
+              <p>
                 <li>
                   <a href="mailto:cumplimiento@agentedecambioquezada.com">
                     Cumplimiento@agentedecambioquezada.com

@@ -171,7 +171,7 @@ const Calculator = (props) => {
                       >
                         {Object.keys(rates).map((currency) => (
                           <option key={currency} value={currency}>
-                            ({rates[currency].currencyFullName})
+                            {rates[currency].currencyFullName}
                           </option>
                         ))}
                       </select>
