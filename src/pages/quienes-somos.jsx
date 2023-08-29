@@ -56,8 +56,8 @@ const QuienesSomos = () => {
             <div className={styles.title_pinture}>
               <h2>Agente de cambio Quezada</h2>
               <p>Agente de Cambio Quezada es una compañía basada en la compra y venta de divisas Su origen viene del 1975, cuando el comerciante Mario Arturo Quezada decide incluir estos servicios en su mercado. Desde el inicio, el señor Quezada quiso aportar y contribuir al desarrollo de su pueblo al ver la necesidad que tenía la ciudadanía por los cambios de divisas e incluso, cheques. Aquella iniciativa fue una de las mejores elecciones en su vida como empresario.</p>
-              <p>Actualmente, somos una entidad regulada por las autoridades nacionales competentes. Figuran: la Superintendencia de bancos de la República Dominicana, Banco central Dominicano y la Unidad de Análisis Financiero. Contamos con un equipo capacitado, ágil y preparado para brindar un servicio de cambio personalizado a cada uno de nuestros clientes.</p>
-              <p>Una de las características más importantes de la compañía, es que siempre brinda la mejor tasa del mercado. El dólar es la divisa con más demanda, sin embargo, dentro de nuestros servicios podrás contar con la compra y venta de euros, dólares canadienses, francos suizos y libras esterlinas.</p>
+              <p>Actualmente, es una entidad regulada por las autoridades nacionales competentes. Figuran: la Superintendencia de bancos de la República Dominicana, Banco central Dominicano y la Unidad de Análisis Financiero. Cuenta con un equipo capacitado, ágil y preparado para brindar un servicio de cambio personalizado a cada uno de sus clientes.</p>
+              <p>Una de las características más importantes de la compañía, es que siempre brinda la mejor tasa del mercado. El dólar es la divisa con más demanda, sin embargo, dentro de sus servicios podrás contar con la compra y venta de euros, dólares canadienses, francos suizos y libras esterlinas.</p>
             </div>
           </div>
           <div className={styles.caja_gradient}></div>
@@ -73,14 +73,14 @@ const QuienesSomos = () => {
         <div className={styles.container__about}>
           <div className={styles.about_player}>
             <div className={styles.about__player}>
-              <iframe src="https://www.youtube.com/embed/gCNvvUsXh6g?controls=0" title="Quezada Agente de cambio" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/gCNvvUsXh6g?controls=0" title="Quezada Agente de cambio" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
           </div>
           <div className={styles.about_info}>
             <h3>Historia</h3>
             <div className={styles.line}></div>
-            <p>La empresa ha crecido de manera exitosa gracias al apoyo familiar con el que ha contado el señor Quezada. Sus hijos, los licenciados, Edwim Arturo Quezada y Miguel Arturo Quezada, son parte primordial de la compañía, además de otros miembros de la familia. </p>
-            <p>Nos encontramos físicamente en toda la zona este del país, con sucursales en: La Romana, Higuey, Downtown Punta Cana, Friusa y Santo Domingo. Además, contamos con nuestra sexta sucursal totalmente <Link to="/quezada-online" className={styles.enlaces}>en línea</Link>, en donde a través de nuestros canales digitales puedes realizar tu cambio sin la necesidad de salir de tu hogar u oficina, disponible en cualquier parte de República Dominicana.</p>
+            <p>La empresa ha crecido de manera exitosa gracias al apoyo familiar con el que ha contado el señor Quezada. Sus hijos, los licenciados, Edwim Arturo Quezada y Miguel Arturo Quezada, son parte primordial de la compañía, además de otros miembros de la familia.</p>
+            <p>Se encuentra físicamente en toda la zona este del país, con sucursales en: La Romana, Higuey, Downtown Punta Cana, Friusa y Santo Domingo. Además, cuenta con una sexta sucursal totalmente <Link to="/quezada-online" className={styles.enlaces}>en línea</Link>, en donde a través de canales digitales puedes realizar tu cambio sin la necesidad de salir de tu hogar u oficina, disponible en cualquier parte de República Dominicana.</p>
             <div className="container_solicitar-tasa">
               <Solicitar />
             </div>

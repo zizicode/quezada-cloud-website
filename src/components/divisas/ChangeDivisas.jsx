@@ -133,7 +133,7 @@ const ChangeDivisas = () => {
                     actividDivisas === "Essterlina1" ? "active_divisa" : ""
                   }
                 ></div>
-                <small>Libra. </small>
+                <small>Libra </small>
               </li>
             </ul>
 

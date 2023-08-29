@@ -37,7 +37,7 @@ const SwiperNav = () => {
     }
   };
 
-  const subInfo = 'Cambiar divisas fácil y rápido, online o en una de nuestras empresas.'
+  const subInfo = 'Cambiar divisas fácil y rápido, online o en una de nuestras sucursales.'
   return (
     <div>
       <Swiper {...swiperOptions}
