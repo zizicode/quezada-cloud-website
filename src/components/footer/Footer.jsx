@@ -54,11 +54,11 @@ const Footer = () => {
           {/* Icons redes */}
           <div className="footer_redes">
             <ul className="footer_list">
-              <li><a href="/#" className="facebook" title="Facebok"><FaFacebookF /></a></li>
-              <li><a href="/#" className="instagram" title="Instagram"><BsInstagram /></a></li>
-              <li><a href="/#" className="instagram" title="YouTube"><BsYoutube /></a></li>
-              <li><a href="/#" className="linkedin" title="Linkedin"><FaLinkedinIn /></a></li>
-              <li><a href="/#" className="linkedin" title="Tiktok"><FaTiktok /></a></li>
+              <li><a href="https://www.facebook.com/agentedecambioquezada?mibextid=LQQJ4d" className="facebook" title="Facebok"><FaFacebookF /></a></li>
+              <li><a href="https://instagram.com/agentedecambioquezada?igshid=MzRlODBiNWFlZA==" className="instagram" title="Instagram"><BsInstagram /></a></li>
+              <li><a href="https://youtube.com/@agentedecambioquezada7757" className="instagram" title="YouTube"><BsYoutube /></a></li>
+              <li><a href="https://www.linkedin.com/company/agente-de-cambio-quezada/" className="linkedin" title="Linkedin"><FaLinkedinIn /></a></li>
+              <li><a href="https://www.tiktok.com/@agentedecambioquezada?_t=8dgNqCrZio1&_r=1" className="linkedin" title="Tiktok"><FaTiktok /></a></li>
             </ul>
           </div>
 
