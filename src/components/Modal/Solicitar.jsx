@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 // icon react
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoLogoWhatsapp } from 'react-icons/io';
@@ -27,8 +26,6 @@ const style = {
 };
 
 
-
-
 const Solicitar = (props) => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -49,6 +46,7 @@ const Solicitar = (props) => {
         sprops = '';
     }
 
+
     return (
         <div className="description_swiper">
             <Button onClick={handleOpen} className={sprops + ' solicitar'}>{xprops} &nbsp; <IoIosArrowDown /></Button>
@@ -67,7 +65,7 @@ const Solicitar = (props) => {
 
                     <div className='solicitar_modal'>
                         <Typography id="modal-modal-title" className='title' variant="h7" component="h4">
-                            Solicita su tasa preferencial por formulario web
+                            Solicite su tasa preferencial por formulario web
                         </Typography>
 
                         <div className="preference">
