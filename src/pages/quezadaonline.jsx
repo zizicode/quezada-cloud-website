@@ -65,7 +65,7 @@ const Quezadaonline = () => {
         <div className={styles.sib_info}>
           <div className={styles.container_sib}>
             <div className={styles.info_sib}>
-              <h2>¿CÓmo puedo beneficiar de Quezada Online?
+              <h2>¿CÓmo me puedo beneficiar de Quezada Online?
               </h2>
               <p>
                 ¡Ahora no tienes que salir de tu casa u oficina para hacer una
@@ -105,15 +105,18 @@ const Quezadaonline = () => {
           <div className={styles.container_option}>
             <div className={styles.content_img}>
               <a href="https://api.whatsapp.com/send/?phone=18095565111&text&app_absent=0"><img src={Image_contact`./whatsapp_png.png`} alt="whatsapp" /></a>
+            <span>WhatsApp</span>
             </div>
 
             <div className={styles.content_img}>
               <a href="mailto:divisas@agentedecambioquezada.com"><img src={Image_contact`./mail_png.webp`} alt="whatsapp" /></a>
+              <span>E-mail</span>
             </div>
 
-            <button onClick={() => openChat()} className={styles.content_img}>
+            <div onClick={() => openChat()} className={styles.content_img}>
               <img src={Image_contact`./chat_png.png`} alt="whatsapp" />
-            </button>
+              <span>Web Chat</span>
+            </div>
 
             {/* <button onClick={() => openChat()}><HiOutlineChatAlt2/> Chat online</button> */}
           </div>
