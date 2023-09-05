@@ -133,7 +133,7 @@ const Calculator = (props) => {
                         checked={operationType === "buy"}
                         onChange={handleOperationChange}
                       />
-                      <label htmlFor="buy">Compra</label>
+                      <label htmlFor="buy">Venta</label>
                     </div>
 
                     <div>
@@ -145,7 +145,7 @@ const Calculator = (props) => {
                         checked={operationType === "sell"}
                         onChange={handleOperationChange}
                       />
-                      <label htmlFor="sell">Venta</label>
+                      <label htmlFor="sell">Compra</label>
                     </div>
                   </div>
                 </div>

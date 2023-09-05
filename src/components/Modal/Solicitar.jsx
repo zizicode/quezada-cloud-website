@@ -65,7 +65,7 @@ const Solicitar = (props) => {
 
                     <div className='solicitar_modal'>
                         <Typography id="modal-modal-title" className='title' variant="h7" component="h4">
-                            Solicite su tasa preferencial por formulario web
+                            Solicite su tasa preferencial por el formulario web
                         </Typography>
 
                         <div className="preference">
