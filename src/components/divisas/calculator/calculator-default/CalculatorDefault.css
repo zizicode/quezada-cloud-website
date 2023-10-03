@@ -1,0 +1,10 @@
+.container_converterD{
+    width: 100%;
+    background-color: aqua;
+}
+
+/* In your CSS file or <style> tag */
+.divider-margin {
+    margin-top: 16px; /* You can adjust the margin as needed */
+    margin-bottom: 16px; /* You can adjust the margin as needed */
+  }

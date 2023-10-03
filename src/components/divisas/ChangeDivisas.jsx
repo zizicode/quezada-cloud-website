@@ -4,7 +4,7 @@ import { useState } from "react";
 import "../../components/divisas/change-divisas.css";
 import UrlChange from "../../data/changeD";
 import changeOfflineD from "../../data/change-offlineD";
-import Calculator from "./calculator/calculator";
+import CalculatorDefault from "./calculator/calculator-default/CalculatorDefault";
 
 // Svg Ads
 import ads from "../../assets/svg/ads-advertising.svg";
@@ -138,7 +138,7 @@ const ChangeDivisas = () => {
             </ul>
 
             {/* Button open moral calculator */}
-            <Calculator  rates={changeD} />
+            <CalculatorDefault  rates={changeD} />
           </div>
         </div>
       </div>
