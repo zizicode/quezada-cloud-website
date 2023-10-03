@@ -68,6 +68,7 @@ const CalculatorDefault = (props) => {
 
   return (
     <div className="calculator">
+      <div style={{display:"none"}}>{IsCode}</div>
       <Button onClick={handleOpen}>Calcula tus divisas</Button>
       <Modal
         open={open}
