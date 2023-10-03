@@ -96,11 +96,11 @@ const Blog = () => {
                     <hr /><br />
 
                     <div className={css.container_items}>
-                        {
+                        {/* {
                             data.map((posts, i) => (
                                 <ItemPost data={posts} key={i} />
                             ))
-                        }
+                        } */}
                     </div>
                 </div>
 
