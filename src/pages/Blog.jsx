@@ -3,7 +3,7 @@ import NavBar from "../components/navbar/NavBar";
 //import data from '../components/Blog/ItemPost/post.json';
 
 // Item Post
-import ItemPost from '../components/Blog/ItemPost/ItemPost';
+// import ItemPost from '../components/Blog/ItemPost/ItemPost';
 
 // Preload pages
 import Loading from "../components/pageLoading/Loading";
@@ -83,6 +83,7 @@ const Blog = () => {
                 <p>Si deseas recibir novedades Quezada, puedes suscribirte a nuestro newsletter</p>
                 <button>¡Suscríbete  aquí!</button>
                 <br />
+                <div style={{display:"none"}}>{data}</div>
             </div>
 
             <div className={css.container_all}>
