@@ -73,7 +73,7 @@ const QuienesSomos = () => {
         <div className={styles.container__about}>
           <div className={styles.about_player}>
             <div className={styles.about__player}>
-              <iframe src="https://www.youtube.com/embed/gCNvvUsXh6g?controls=0" title="Quezada Agente de cambio" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/gCNvvUsXh6g?controls=0" title="Quezada Agente de cambio" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
           </div>
           <div className={styles.about_info}>
