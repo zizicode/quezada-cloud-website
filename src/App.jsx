@@ -14,7 +14,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        {/* Definición de rutas */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="quezada-online" element={<QuezadaOnline />} />
