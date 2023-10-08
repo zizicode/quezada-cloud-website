@@ -15,58 +15,35 @@ Bienvenido al sitio web de Quezada Agente de Cambio. Somos una empresa dedicada 
 ![Captura de pantalla 2](screenshot2.png)
 
 ## Tecnologías Utilizadas
-- [Lista de tecnologías y herramientas utilizadas]
-### Analytics
+- Lista de tecnologías y herramientas utilizadas
 - Google Analytics
 - GA4
-
-### JavaScript frameworks
 - Emotion
 - React
-
-### Video players
 - YouTube
-
-### Web frameworks
 - Express
-
-### Web servers
-- Express
-
-### Programming languages
 - Node.js
-
-### CDN
 - Unpkg
-
-### Maps
 - Leaflet 1.9.4
-
-### Development
 - Emotion
-
-### Live chat
 - Trengo
-
-### CRM
 - Keap
-
-### JavaScript libraries
 - Swiper
 - core-js 3.33.0
 - jQuery 3.3.1
 - AOS 2.3.1
 
 ## Cómo Usar
-1. Clona este repositorio: `git clone https://github.com/tuusuario/tuprojecto.git`
+1. Clona este repositorio: `git clone https://github.com/doblezz/quezada-cloud-website`
 2. ejecuta `npm install` en la raiz del proyecto.
 3. luego escribe `npm run dev` en la terminal y corre el proyecto.
 4. Abre el archivo `index.html` en tu navegador web.
 
 ## Contacto
-- [victordoblezz@gmail.com]
-- [zizicode.com]
-- [829-424-3140]
+- Dev: Victor M. Rodriguez
+- victordoblezz@gmail.com
+- zizicode.com
+- 829-424-3140
 
 ## Licencia
-Este proyecto está bajo la Licencia [Licencia MIT]. Consulta el archivo [LICENSE.md] para obtener más detalles.
+Este proyecto está bajo la Licencia Licencia MIT. Consulta el archivo LICENSE.md para obtener más detalles.
