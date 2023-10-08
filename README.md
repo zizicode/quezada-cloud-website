@@ -6,7 +6,7 @@
 Bienvenido al sitio web de Quezada Agente de Cambio. Somos una empresa dedicada al cambio de divisas, proporcionando servicios confiables y seguros para satisfacer tus necesidades de conversión de divisas.
 
 ## Características
-- [¿Para qué se creó el sitio web?]
+- ¿Para qué se creó el sitio web?
 - "Quezada Agente de Cambio" se creó con el propósito principal de proporcionar una plataforma en línea que facilite y mejore la experiencia de los clientes en el ámbito financiero, específicamente en el proceso de cambio de divisas. 
 
 
@@ -46,4 +46,4 @@ Bienvenido al sitio web de Quezada Agente de Cambio. Somos una empresa dedicada 
 - 829-424-3140
 
 ## Licencia
-Este proyecto está bajo la Licencia Licencia MIT. Consulta el archivo LICENSE.md para obtener más detalles.
+Este proyecto está bajo la Licencia Licencia MIT.
