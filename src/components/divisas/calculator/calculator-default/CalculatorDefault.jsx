@@ -58,17 +58,24 @@ const CalculatorDefault = (props) => {
   };
 
   const estiloTitulo = {
-    fontSize: "13px",
+    fontSize: "14px",
+    marginTop:'5px'
   };
 
   const estiloDescripcion = {
     fontWeight: "bold",
-    fontSize: "14px",
+    fontSize: "17px",
   };
+
+  const description_result = {
+    fontWeight:'600',
+  }
+
+  // console.log(props.rates[0].currencyCode);
 
   return (
     <div className="calculator">
-      <div style={{display:"none"}}>{IsCode}</div>
+      <div style={{ display: "none" }}>{IsCode}</div>
       <Button onClick={handleOpen}>Calcula tus divisas</Button>
       <Modal
         open={open}
@@ -131,57 +138,73 @@ const CalculatorDefault = (props) => {
             <Divider style={{ margin: "20px 0" }} />
 
             <div className="container_operacion">
-              <Grid container style={{ maxWidth: "95%", margin: "auto" }} spacing={1}>
-                <Grid item xs={6} style={{ textAlign: "left" }}>
-                  <Typography variant="h5" style={estiloTitulo}>
-                    Por el monto de:
-                  </Typography>
+              <Grid
+                container
+                style={{ maxWidth: "95%", margin: "auto" }}
+                spacing={1}
+                
+              >
+                <Grid item xs={6} style={{ textAlign: "left", borderRight:'1px solid #E4E4E4' }}>
                   <Typography variant="body1" style={estiloDescripcion}>
                     Venta:
-                    
+                  </Typography>
+                  <Typography variant="h3" style={estiloTitulo}>
+                    Monto en <span style={description_result}>{props.rates[selectedValue].currencyCode}:
                     {formatCurrency(
                       monto,
                       selectedValue,
                       "FORMAT",
                       props.rates
-                    )}
+                    )}</span>
+                  </Typography>
+                  <Typography variant="h3" style={estiloTitulo}>
+                    Recibes <span style={description_result}>DOP:
+                    {formatCurrency(
+                      monto,
+                      selectedValue,
+                      "VENTA",
+                      props.rates
+                    )}</span>
                   </Typography>
                 </Grid>
+                {/*  */}
                 <Grid item xs={6} style={{ textAlign: "right" }}>
-                  <Typography variant="h5" style={estiloTitulo}>
-                    Recibes:
-                  </Typography>
                   <Typography variant="body1" style={estiloDescripcion}>
-                    Venta: 
-                    {formatCurrency(monto, selectedValue, "VENTA", props.rates)}
+                    Compra:
                   </Typography>
-                </Grid>
-                <Grid item xs={6} style={{ textAlign: "left" }}>
-                  <Typography variant="h5" style={estiloTitulo}>
-                    Por el monto de:
-                  </Typography>
-                  <Typography variant="body1" style={estiloDescripcion}>
-                    Compra: {formatCurrency(
+                  <Typography variant="h3" style={estiloTitulo}>
+                    Monto en <span style={description_result}>DOP:{formatCurrency(
                       monto,
                       selectedValue,
                       "FORMAT",
                       props.rates
-                    )}
+                    )}</span>
                   </Typography>
-                </Grid>
-                <Grid item xs={6} style={{ textAlign: "right" }}>
-                  <Typography variant="h5" style={estiloTitulo}>
-                    Recibes:
-                  </Typography>
-                  <Typography variant="body1" style={estiloDescripcion}>
-                    Compra:
-                    {/* {IsCode > 0 ? rates[selectedValue].currencyCode : "N/A"} */}
+                  <Typography variant="body1" style={estiloTitulo}>
+                    Recibes <span style={description_result}>{props.rates[selectedValue].currencyCode}:
                     {formatCurrency(
                       monto,
                       selectedValue,
                       "COMPRA",
                       props.rates
-                    )}
+                    )}</span>
+                  </Typography>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  style={{
+                    textAlign: "center",
+                    display: "flex",
+                    justifyContent: "space-around",
+                    marginTop: "20px",
+                  }}
+                >
+                  <Typography variant="body1" style={estiloTitulo}>
+                    Tasa de venta: <span style={description_result}>DOP: {props.rates[selectedValue].purchaseRate}</span>
+                  </Typography>
+                  <Typography variant="body1" style={estiloTitulo}>
+                    Tasa de compra: <span style={description_result}>DOP: {props.rates[selectedValue].saleRate}</span>
                   </Typography>
                 </Grid>
               </Grid>

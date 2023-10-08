@@ -72,7 +72,7 @@ const Quezadaonline = () => {
                 operación con nosotros!
               </p>
               <p>
-                Con tan solo con unos clicks en nuestra página web o app móvil
+                Con tan solo unos clicks en nuestra página web o app móvil
                 puedes consultar las tasas, solicitar tasa preferencial y
                 solicitar tu operación de cambio por transferencia o en unas de nuestras sucursales. ¡Siempre con el mejor
                 servicio!
