@@ -1,6 +1,6 @@
 {
   "name": "quezada",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -58,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "husky": "^8.0.3"
   }
 }
