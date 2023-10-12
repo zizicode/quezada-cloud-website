@@ -20,7 +20,7 @@ export function formatCurrency(monto, index, operation, currency) {
       result = formattedValue.format(monto * currencySelect.purchaseRate);
       break;
     case "COMPRA":
-      result = formattedValue.format(monto / currencySelect.purchaseRate);
+      result = formattedValue.format(monto / currencySelect.saleRate);
       break;
     case "FORMAT":
       result = result = formattedValue.format(monto);
