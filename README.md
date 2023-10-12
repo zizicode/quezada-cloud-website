@@ -10,9 +10,10 @@ Bienvenido al sitio web de Quezada Agente de Cambio. Somos una empresa dedicada 
  "Quezada Agente de Cambio" se creó con el propósito principal de proporcionar una plataforma en línea que facilite y mejore la experiencia de los clientes en el ámbito financiero, específicamente en el proceso de cambio de divisas. 
 
 
+
 ## Capturas de Pantalla
-![Captura de pantalla 1](screenshot1.png)
-![Captura de pantalla 2](screenshot2.png)
+![Captura de pantalla 1](![main](https://github.com/doblezz/quezada-cloud-website/assets/100297463/7e0d38b0-c80e-4c68-93e1-1994159aa1f6))
+![Captura de pantalla 2](![conversor](https://github.com/doblezz/quezada-cloud-website/assets/100297463/379a4b54-09c2-46a6-b847-a2b1d0c586df))
 
 ## Tecnologías Utilizadas
 - Lista de tecnologías y herramientas utilizadas
