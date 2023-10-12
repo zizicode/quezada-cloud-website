@@ -7,7 +7,8 @@ Bienvenido al sitio web de Quezada Agente de Cambio. Somos una empresa dedicada 
 
 ## Características
 - ¿Para qué se creó el sitio web?
-- "Quezada Agente de Cambio" se creó con el propósito principal de proporcionar una plataforma en línea que facilite y mejore la experiencia de los clientes en el ámbito financiero, específicamente en el proceso de cambio de divisas. 
+ "Quezada Agente de Cambio" se creó con el propósito principal de proporcionar una plataforma en línea que facilite y mejore la experiencia de los clientes en el ámbito financiero, específicamente en el proceso de cambio de divisas. 
+
 
 
 ## Capturas de Pantalla
@@ -37,7 +38,7 @@ Bienvenido al sitio web de Quezada Agente de Cambio. Somos una empresa dedicada 
 1. Clona este repositorio: `git clone https://github.com/doblezz/quezada-cloud-website`
 2. ejecuta `npm install` en la raiz del proyecto.
 3. luego escribe `npm run dev` en la terminal y corre el proyecto.
-4. Abre el archivo `index.html` en tu navegador web.
+4. Accede al `localhost:3000` en tu navegador web.
 
 ## Contacto
 - Dev: Victor M. Rodriguez
