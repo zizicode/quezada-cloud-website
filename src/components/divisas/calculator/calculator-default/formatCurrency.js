@@ -3,30 +3,30 @@ export function formatCurrency(monto, index, operation, currency) {
 
   const formattedValue = new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency:currencySelect.currencyCode, // Usar la moneda deseada del objeto currencySelect
+    currency: "USD", // Agrega la moneda (cambia "USD" por la moneda deseada)
     minimumFractionDigits: 2,
   });
 
   let result;
+
   // Verificar si el valor es un número válido
-  if (monto === "") {
+  if (isNaN(monto) || monto === "") {
     result = formattedValue.format(0);
     return result;
   }
 
   switch (operation) {
     case "VENTA":
-      result = formattedValue.format(monto * currencySelect.saleRate);
+      result = formattedValue.format(monto * currencySelect.purchaseRate);
       break;
     case "COMPRA":
-      result = formattedValue.format( monto /currencySelect.purchaseRate );
+      result = formattedValue.format(monto / currencySelect.saleRate);
       break;
     case "FORMAT":
-      result = formattedValue.format(monto);
+      result = result = formattedValue.format(monto);
       break;
     default:
-      console.log("Operación no reconocida");
-      result = "";
+      result = monto;
   }
 
   return result;

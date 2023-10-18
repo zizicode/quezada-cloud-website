@@ -1,7 +1,31 @@
+.filtered_item{
+    transition: all 2250ms ease-in-out;
+}
+
+.active-tag {
+    border: 2px solid #89EC39 !important; /* Color del borde cuando está activo */
+}
+
+.pagination{
+    margin: 20px 0 20px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+
+    nav{
+        width: 100%!important;
+        justify-items: center;
+    }
+}
+
 .header_blog {
     width: 100%;
     height: auto;
-    min-height: 350px;
+    min-height: 250px;
 
     display: flex;
     justify-content: center;

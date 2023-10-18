@@ -1,113 +1,183 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from "react";
 import NavBar from "../components/navbar/NavBar";
-//import data from '../components/Blog/ItemPost/post.json';
+import css from "./styles_pages/styles-blog.module.css";
+import styled from "@emotion/styled";
+import { Box, Divider } from "@mui/material";
+import { Pagination, PaginationItem } from "@mui/material";
 
-// Item Post
-// import ItemPost from '../components/Blog/ItemPost/ItemPost';
-
-// Preload pages
-import Loading from "../components/pageLoading/Loading";
-
-//styles css
-import css from './styles_pages/styles-blog.module.css';
-
+import { posts } from "./../data/PostFakes";
+import ItemPost from "../components/Blog/ItemPost/ItemPost";
+import { SearchFilter } from "../components/SearchFilter/SearchFilter";
+import { tags } from "../data/TagsFakes";
 
 const Blog = () => {
-    // State loadPage
-    const [load, setLoad] = useState('Load');
-    // Active categorias
-    const [active, setActive] = useState('all');
+  const [filterText, setFilterText] = useState("");
+  const [selectedTags, setSelectedTags] = useState([]);
 
-    if (load === 'Load') {
-        document.onreadystatechange = () => {
-            if (document.readyState === 'complete') {
-                setTimeout(() => {
-                    setLoad('false');
-                }, 1500);
-            }
-        }
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 20;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  // Tags
+  const handleTagClick = (tagId) => {
+    if (selectedTags.includes(tagId)) {
+      setSelectedTags(selectedTags.filter((id) => id !== tagId));
+    } else {
+      setSelectedTags([...selectedTags, tagId]);
     }
+  };
 
-    useEffect(() => {
-        if (document.readyState === 'complete') {
-            setTimeout(() => {
-                setLoad('false');
-            }, 1500);
-        }
-    })
-    //END State loadPage
+  const handleFilterChange = (newFilterText) => {
+    setFilterText(newFilterText);
+  };
 
+  // Search Filter
+  const filteredItems = posts.filter((post) => {
+    const titleMatch = post.title
+      .toLowerCase()
+      .includes(filterText.toLowerCase());
+    const tagsMatch =
+      selectedTags.length === 0 || selectedTags.includes(post.tag_id);
+    return titleMatch && tagsMatch;
+  });
 
-// Llamando datos de los post del blog.
-    const [data, setM] = useState([]);
-    const Url = 'https://my-json-server.typicode.com/doblezz/db-json/post';
-    const UrlCategorias = 'https://my-json-server.typicode.com/doblezz/db-json/post?categoria=';
+  const pageCount = Math.ceil(filteredItems.length / itemsPerPage);
 
-    useEffect(() => {
-        async function buscarPost() {
-            await fetch(Url)
-                .then(response => response.json())
-                .then(datos => setM(datos))
-        }
-        buscarPost();
-    }, [Url])
+  // // Maneja el cambio de página
+  // const handlePageChange = (event, page) => {
+  //   // Puedes calcular el índice de inicio y fin para mostrar los elementos
+  //   const startIndex = (page - 1) * itemsPerPage;
+  //   const endIndex = startIndex + itemsPerPage;
+  //   setCurrentPage(page);
+  // };
 
-// accion de active botones por categoria al igual que los post.
-    function change(select) {
-        setActive(select);
+  return (
+    <>
+      <NavBar />
 
-        if(select === 'all'){
-            async function buscarPost() {
-                await fetch(Url)
-                    .then(response => response.json())
-                    .then(datos => setM(datos))
-            }
-            buscarPost();
-        }else{
-            async function buscarPost() {
-                await fetch(UrlCategorias+select)
-                    .then(response => response.json())
-                    .then(datos => setM(datos))
-            }
-            buscarPost();
-        }
+      <div className={css.header_blog}>
+        <h1>Quezada | Nuestro Blog</h1>
+        <p>
+          Si deseas recibir novedades Quezada, puedes suscribirte a nuestro
+          newsletter
+        </p>
+        <button>¡Suscríbete aquí!</button>
+      </div>
+
+      <Container>
+        <SectionFilter>
+          <ContentInputSearch>
+            <SearchFilter
+              items={filteredItems}
+              onFilterChange={handleFilterChange}
+            />
+          </ContentInputSearch>
+          <br />
+          <Divider />
+          {/* paginación */}
+          <div className={css.pagination}>
+            <Pagination
+              shape="rounded"
+              count={pageCount}
+              page={currentPage}
+              onChange={(event, page) => setCurrentPage(page)}
+              renderItem={(item) => <PaginationItem {...item} />}
+            />
+          </div>
+          <Divider />
+
+          <ContentItemsFilter>
+            <ol>
+              <h3>Filtrar por tags</h3>
+            </ol>
+            <br />
+            <ItemFilter>
+              {/* Renderiza los tags */}
+              {tags.map((tag) => (
+                <li
+                  key={tag.id}
+                  id={`tag-${tag.id}`}
+                  onClick={() => handleTagClick(tag.id)}
+                  className={`${css.tag} ${
+                    selectedTags.includes(tag.id) ? css["active-tag"] : ""
+                  }`}
+                >
+                  {tag.nombre}
+                </li>
+              ))}
+            </ItemFilter>
+          </ContentItemsFilter>
+        </SectionFilter>
+
+        <ContainerPosts className={css.filtered_item}>
+          {/* Renderiza los elementos de la página actual */}
+          {filteredItems.slice(startIndex, endIndex).map((post, index) => (
+            <ItemPost data={post} key={index} />
+          ))}
+        </ContainerPosts>
+      </Container>
+    </>
+  );
+};
+
+export default Blog;
+
+const Container = styled(Box)`
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 200px auto;
+  gap: 20px;
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const ContainerPosts = styled(Box)`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 25px;
+`;
+
+const SectionFilter = styled(Box)`
+  width: 100%;
+  padding: 0;
+  color: #616161;
+`;
+
+const ContentItemsFilter = styled(Box)`
+  padding: 20px 0 0 10px;
+`;
+
+const ItemFilter = styled(Box)`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 9px;
+
+  li {
+    padding: 3px 6px;
+    border-radius: 15px;
+    border: 1px solid #f1f3ee;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #f1f3ee;
     }
+  }
+`;
 
-    return (
-        <>
-            <Loading load={load} />
-            <NavBar />
-
-            <div className={css.header_blog}>
-                <h1>Quezada | Nuestro Blog</h1>
-                <p>Si deseas recibir novedades Quezada, puedes suscribirte a nuestro newsletter</p>
-                <button>¡Suscríbete  aquí!</button>
-                <br />
-                <div style={{display:"none"}}>{data}</div>
-            </div>
-
-            <div className={css.container_all}>
-                <div className={css.categorias}>
-                    <ul>
-                        <li onClick={() => change('all')} className={active === 'all' ? css.active : css.list}>Todo</li>
-                        <li onClick={() => change('Finanzas')} className={active === 'Finanzas' ? css.active : css.list}>Finanzas</li>
-                        <li onClick={() => change('Noticias')} className={active === 'Noticias' ? css.active : css.list}>Noticias</li>
-                        <li onClick={() => change('Novedades')} className={active === 'Novedades' ? css.active : css.list}>Novedades</li>
-                    </ul>
-                    <hr /><br />
-
-                    <div className={css.container_items}>
-                        {/* {
-                            data.map((posts, i) => (
-                                <ItemPost data={posts} key={i} />
-                            ))
-                        } */}
-                    </div>
-                </div>
-
-            </div>
-        </>
-    )
-}
-
-export default Blog
+const ContentInputSearch = styled(Box)`
+  width: 100%;
+  margin: 0 0 5px 0;
+  padding: 0;
+`;
