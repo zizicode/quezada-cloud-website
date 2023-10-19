@@ -37,7 +37,7 @@ const rf_footer = () => {
             <div className="certification">
               <div className="image">
                 <img className="image_footer" src={ima_sello} alt="SIB" />
-                <a href="https://certificaciones.uaf.gob.do/certificaciones_so_view.php?editid1=240" target="_blank" rel="nofollow" hreflang="es" title="Cerficación Sujeto Obligado - Unidad de Análisis Financiero">
+                <a href="https://certificaciones.uaf.gob.do/certificaciones_so_view.php?editid1=240" target="_blank" rel="noopener noreferrer" hreflang="es" title="Cerficación Sujeto Obligado - Unidad de Análisis Financiero">
                   <img className="image_footer" src="https://certificaciones.uaf.gob.do/certificados/UAF00240YQ41.png" alt="ISO" />
                 </a>
               </div>
@@ -52,7 +52,6 @@ const rf_footer = () => {
   )
 }
 export default rf_footer
-
 
 const ContentFooter = styled.div({
   position:'absolute as absolute;',
