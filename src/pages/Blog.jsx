@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../components/navbar/NavBar";
 import css from "./styles_pages/styles-blog.module.css";
 import styled from "@emotion/styled";
@@ -9,6 +9,7 @@ import { posts } from "./../data/PostFakes";
 import ItemPost from "../components/Blog/ItemPost/ItemPost";
 import { SearchFilter } from "../components/SearchFilter/SearchFilter";
 import { tags } from "../data/TagsFakes";
+import Loading from "../components/pageLoading/Loading";
 
 const Blog = () => {
   const [filterText, setFilterText] = useState("");
@@ -53,8 +54,34 @@ const Blog = () => {
   //   setCurrentPage(page);
   // };
 
+    // State para controlar el estado de carga
+    const [load, setLoad] = useState("Load");
+
+    useEffect(() => {
+      // Función para cambiar el estado de carga después de un tiempo
+      const changeLoadState = () => {
+        if (load === "Load") {
+          setTimeout(() => {
+            setLoad("false");
+          }, 1500);
+        }
+      };
+  
+      // Cambiar el estado de carga cuando el documento está completamente cargado
+      if (document.readyState === "complete") {
+        changeLoadState();
+      } else {
+        document.onreadystatechange = () => {
+          if (document.readyState === "complete") {
+            changeLoadState();
+          }
+        };
+      }
+    }, [load]);
+
   return (
     <>
+    <Loading load={load} />
       <NavBar />
 
       <div className={css.header_blog}>
