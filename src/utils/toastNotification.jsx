@@ -28,6 +28,9 @@ const unsubscribe = (props) => {
         // toast has been removed
         toast.error(props.message, { autoClose: 4000 });
         break;
+      default:
+        // default notification
+        toast.error(props.message, { autoClose: 4000 });
     }
   };
 
