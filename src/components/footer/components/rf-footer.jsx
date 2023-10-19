@@ -53,7 +53,6 @@ const rf_footer = () => {
 }
 export default rf_footer
 
-
 const ContentFooter = styled.div({
   position:'absolute as absolute;',
   width: '100%',
