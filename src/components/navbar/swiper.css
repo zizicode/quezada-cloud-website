@@ -167,7 +167,11 @@
     }
 
     .column-2-swipper .container-sib-swiper {
-        width: 100%;
+        width: 90%;
+    }
+
+    .column-2-swipper .container-sib-swiper img{
+        width: 10% !important;
     }
 
     .animation-container{

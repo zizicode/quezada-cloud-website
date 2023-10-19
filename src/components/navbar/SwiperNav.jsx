@@ -56,8 +56,9 @@ const SwiperNav = () => {
               </div>
             </div>
             <div className="column-2-swipper">
-              <div className="container-sib-swiper">
+              <div className="container-sib-swiper" style={{display:'flex'}}>
                 <img src={ImaSwiper`./sello_png1.png`} alt="SIB" />
+                <img src="https://certificaciones.uaf.gob.do/certificados/UAF00240YQ41.png" alt="SIB" />
               </div>
             </div>
           </div>
@@ -66,6 +67,9 @@ const SwiperNav = () => {
           <div className={`animation-container ${activeIndex === 0 ? 'active' : ''}`}>
             <div className="animation-show">
               <h3>Transferencias</h3>
+              <div className="constainer_solicitar_tasa_swipper" style={{zIndex:'99999999'}}>
+                <Solicitar name={'Solicitar Tasa'} stylec={'solicitar_tasa_swipper'} className='solicitar_tasa_swipper' />
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -73,6 +77,9 @@ const SwiperNav = () => {
         <div className={`animation-container ${activeIndex === 1 ? 'active' : ''}`}>
             <div className="animation-show">
               <h3>Cambio de Divisas</h3>
+              <div className="constainer_solicitar_tasa_swipper" style={{zIndex:'99999999'}}>
+                <Solicitar name={'Solicitar Tasa'} stylec={'solicitar_tasa_swipper'} className='solicitar_tasa_swipper' />
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -80,6 +87,9 @@ const SwiperNav = () => {
         <div className={`animation-container ${activeIndex === 2 ? 'active' : ''}`}>
             <div className="animation-show">
               <h3>Avances de efectivo con tarjeta</h3>
+              <div className="constainer_solicitar_tasa_swipper" style={{zIndex:'99999999'}}>
+                <Solicitar name={'Solicitar Tasa'} stylec={'solicitar_tasa_swipper'} className='solicitar_tasa_swipper' />
+              </div>
             </div>
           </div>
         </SwiperSlide>
