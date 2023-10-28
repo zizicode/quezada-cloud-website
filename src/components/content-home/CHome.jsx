@@ -4,13 +4,8 @@ import Solicitar from "../Modal/Solicitar";
 import { BsCurrencyExchange } from "react-icons/bs";
 import { GiReceiveMoney } from "react-icons/gi";
 import { BiTransferAlt } from "react-icons/bi";
-
 // Styles
 import "../../components/content-home/chome.css";
-import CBlog from "../CBlog/CBlog";
-
-// Import images
-const imageBlog = require.context("../../assets/cblog", true);
 
 const CHome = () => {
   return (
@@ -82,27 +77,6 @@ const CHome = () => {
       </div>
       <div className="solicitar_divisas">
           <Solicitar />
-        </div>
-      <br />
-      <br />
-      <br />
-      <br />
-
-      {/* END SERVICES */}
-
-      <div className="container_blog">
-        <h2>Blog post</h2>
-        <div className="line_blog_title"></div>
-        <span className="coment_blog">49 Post Publicados</span>
-
-        <div className="gif_drag">
-          <img
-            src={imageBlog`./dragCursor.gif`}
-            alt="dragCursor"
-            className="drag"
-          />
-        </div>
-        <CBlog />
       </div>
     </div>
   );
